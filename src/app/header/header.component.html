@@ -1,0 +1,60 @@
+<header class="main-header">
+  <div class="logo" routerLink="."><span>&lt;/</span>ARAY<span>&gt;</span></div>
+
+  <button
+    class="toggle-btn"
+    aria-label="toggle button"
+    #toggleBtn
+    (click)="toggleNav()"
+  >
+    <div class="toggle-line top"></div>
+    <div class="toggle-line bottom"></div>
+  </button>
+</header>
+
+<nav class="nav" #nav>
+  <div class="nav-list__container">
+    <ul class="nav-list">
+      <li
+        class="nav-item"
+        routerLink="/"
+        fragment="about"
+        [class.active]="(activeFragment | async) == 'about'"
+      >
+        About.
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/"
+        fragment="skills"
+        [class.active]="(activeFragment | async) == 'skills'"
+      >
+        Skills.
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/"
+        fragment="projects"
+        [class.active]="(activeFragment | async) == 'projects'"
+      >
+        Projects.
+      </li>
+      <li
+        class="nav-item"
+        routerLink="/"
+        fragment="contact"
+        [class.active]="(activeFragment | async) == 'contact'"
+      >
+        Contact.
+      </li>
+      <li class="nav-item">
+        <a
+          href="./../../assets/file/resume.pdf"
+          target="_blank"
+          aria-label="Chime's Resume"
+          >Download CV.</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

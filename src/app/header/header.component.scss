@@ -1,0 +1,141 @@
+@import "./../shared/shared";
+
+.main-header {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  @include between-centered();
+  padding: toRem(20) toRem(16);
+
+  @media (min-width: $lg) {
+    padding: toRem(24) toRem(80);
+  }
+  @media (min-width: $two-xl) {
+    padding: toRem(24) toRem(101);
+  }
+
+  .logo {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(28);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(40);
+    }
+    @include fade-hover(opacity, 300ms, 0.6);
+
+    span {
+      color: var(--main-purple);
+    }
+  }
+
+  .toggle-btn {
+    background-color: #0000;
+    width: toRem(32);
+    height: toRem(24);
+    padding: toRem(6) toRem(4);
+    @include column-flex();
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: $lg) {
+      width: toRem(40);
+      height: toRem(30);
+      padding: toRem(7.6) toRem(5);
+    }
+
+    .toggle-line {
+      transition: all 0.3s ease-out;
+      background-color: var(--black-100);
+      width: toRem(24);
+      height: toRem(2);
+    }
+
+    &.opened {
+      position: relative;
+      justify-content: flex-start;
+
+      .toggle-line.top {
+        position: absolute;
+        transform: rotateZ(45deg);
+      }
+
+      .toggle-line.bottom {
+        position: absolute;
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  min-width: toRem(280);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -100vw;
+  background-color: var(--main-black);
+  transition: all 0.3s ease-out;
+  padding: toRem(78) 0 toRem(54);
+  overflow: auto;
+  @include custom-scrollbar();
+
+  .nav-list__container {
+    width: 100%;
+    height: 100%;
+
+    .nav-list {
+      margin: 15% 0;
+      @include column-flex();
+      width: 100%;
+      list-style: none;
+      gap: toRem(64 - 32);
+
+      .nav-item {
+        align-self: flex-start;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: toRem(32);
+        line-height: toRem(29);
+        padding: toRem(16);
+        color: var(--main-color);
+
+        a {
+          width: 100%;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: toRem(32);
+          line-height: toRem(29);
+          color: var(--main-color);
+
+          @media (hover: hover) {
+            &:hover {
+              color: var(--purple-30);
+            }
+          }
+        }
+
+        &.active {
+          color: var(--main-purple);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: var(--purple-30);
+          }
+        }
+      }
+    }
+  }
+}

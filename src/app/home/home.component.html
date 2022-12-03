@@ -1,0 +1,146 @@
+<main>
+  <section id="home">
+    <img
+      class="bg-img"
+      ngSrc="./../../assets/bg-image.jpg"
+      sizes="100%"
+      alt
+      priority
+      fill
+    />
+
+    <div class="intro">
+      <div class="intro-msg">
+        <h4 class="welcome-msg">Hello World!</h4>
+        <h2 class="name">I’m <span>Yusuf Abdulraheem</span></h2>
+        <h4 class="job-title">A full stack web developer</h4>
+      </div>
+
+      <button
+        appClick="light"
+        routerLink="/"
+        fragment="about"
+        aria-label="about me button"
+        class="cta"
+      >
+        <span>MORE ABOUT ME</span>
+
+        <img
+          width="24"
+          height="24"
+          ngSrc="./../../assets/icons/arrow-down.png"
+          alt
+          (error)="$any($event.currentTarget).style.display = 'none'"
+          priority
+        />
+      </button>
+    </div>
+
+    <app-socials></app-socials>
+  </section>
+
+  <section id="about">
+    <h2 class="title">
+      <span>About</span>
+      <h4 class="main-title">About Me</h4>
+    </h2>
+
+    <p class="about-content">
+      My name is Yusuf Abdulraheem. I’m a full stack web developer. When I'm not
+      coding, I'm either cycling, swimming or diving into my own imaginaton. My
+      skills are mainly focused on MEAN stack web development tools (MongoDB,
+      ExpressJS, Angular, NodeJS). Additionally, I have a solid knowledge and
+      experience with HTML, CSS, JavaScript for frontend, Template engines such
+      as EJS, PUG and Handlebars for dynamic rendering. NodeJS and it's
+      framework (ExpressJS) for backend. With my knowledge I'm quite experienced
+      with developing Progressive Web Apps.
+    </p>
+
+    <div class="about-btn__container">
+      <button appClick class="purple">HIRE ME</button>
+      <button appClick class="white">RESUME</button>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="title">
+      <span>Skills</span>
+      <h4 class="main-title">Skills</h4>
+    </h2>
+
+    <div class="skills-main__container">
+      <div class="skills-list__container">
+        <div class="skill-icon__cover">
+          <img
+            width="72"
+            height="67"
+            ngSrc="./../../assets/icons/html-syntax.png"
+            alt="frontend icon"
+            priority
+          />
+        </div>
+
+        <h3 class="skill-tile">Frontend Development</h3>
+
+        <p class="skill-desc">
+          I like to code things from scratch, and enjoy bringing ideas to life
+          in the browser.
+        </p>
+
+        <div class="term">Skills:</div>
+
+        <ul class="skills-list">
+          <li class="skills-item">HTML</li>
+          <li class="skills-item">CSS</li>
+          <li class="skills-item">SASS/SCSS</li>
+          <li class="skills-item">JavaScript</li>
+          <li class="skills-item">TypeScript</li>
+          <li class="skills-item">Angular</li>
+          <li class="skills-item">Webpack</li>
+        </ul>
+      </div>
+
+      <div class="skills-list__container">
+        <div class="skill-icon__cover">
+          <img
+            width="74"
+            height="85"
+            ngSrc="./../../assets/icons/database.png"
+            alt="backend icon3"
+            priority
+          />
+        </div>
+
+        <h3 class="skill-tile">Backend Development</h3>
+
+        <p class="skill-desc">
+          I like organizing data, and ensuring everything on the client-side
+          actually works.
+        </p>
+
+        <div class="term">Skills:</div>
+
+        <ul class="skills-list">
+          <li class="skills-item">NodeJs + TypeScript</li>
+          <li class="skills-item">ExpressJs</li>
+          <li class="skills-item">MongoDB</li>
+          <li class="skills-item">mySQL</li>
+          <li class="skills-item">RESTAPI</li>
+          <li class="skills-item">GraphQL</li>
+          <li class="skills-item">Firebase</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">
+      <span>Projects</span>
+      <h4 class="main-title">My Projects</h4>
+    </h2>
+
+    <ul class="projects-list">
+      <li class="projects"></li>
+    </ul>
+  </section>
+</main>
