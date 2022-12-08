@@ -14,25 +14,23 @@
     padding: toRem(24) toRem(80);
   }
   @media (min-width: $two-xl) {
-    padding: toRem(24) toRem(101);
+    padding: toRem(40) toRem(101);
   }
 
   .logo {
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
+    width: toRem(97);
 
-    @media screen and (min-width: $md) {
-      font-size: toRem(28);
+    @media screen and (min-width: $lg) {
+      width: toRem(111);
     }
     @media screen and (min-width: $two-xl) {
-      font-size: toRem(40);
+      width: toRem(160);
     }
     @include fade-hover(opacity, 300ms, 0.6);
 
-    span {
-      color: var(--main-purple);
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -87,9 +85,16 @@
   right: -100vw;
   background-color: var(--main-black);
   transition: all 0.3s ease-out;
-  padding: toRem(78) 0 toRem(54);
+  padding: toRem(69) 0 toRem(54);
   overflow: auto;
   @include custom-scrollbar();
+
+  @media (min-width: $lg) {
+    padding: toRem(78) 0 toRem(54);
+  }
+  @media (min-width: $two-xl) {
+    padding: toRem(110) 0 toRem(54);
+  }
 
   .nav-list__container {
     width: 100%;
@@ -102,6 +107,14 @@
       list-style: none;
       gap: toRem(64 - 32);
 
+      @media (min-width: $lg) {
+        gap: toRem(56 - 32);
+        margin: toRem(208 - 78) 0 toRem(32);
+      }
+      @media (min-width: $two-xl) {
+        margin: toRem(208 - 131) 0 toRem(32);
+      }
+
       .nav-item {
         align-self: flex-start;
         cursor: pointer;
@@ -111,6 +124,17 @@
         padding: toRem(16);
         color: var(--main-color);
 
+        @media (min-width: $lg) {
+          padding: toRem(16) toRem(80);
+          font-size: toRem(48);
+          line-height: toRem(48);
+        }
+        @media (min-width: $two-xl) {
+          padding: toRem(16) toRem(131);
+          font-size: toRem(64);
+          line-height: toRem(64);
+        }
+
         a {
           width: 100%;
           cursor: pointer;
@@ -119,8 +143,17 @@
           line-height: toRem(29);
           color: var(--main-color);
 
+          @media (min-width: $lg) {
+            font-size: toRem(48);
+            line-height: toRem(48);
+          }
+          @media (min-width: $two-xl) {
+            font-size: toRem(64);
+            line-height: toRem(64);
+          }
           @media (hover: hover) {
             &:hover {
+              font-weight: 900;
               color: var(--purple-30);
             }
           }
@@ -132,6 +165,7 @@
 
         @media (hover: hover) {
           &:hover {
+            font-weight: 900;
             color: var(--purple-30);
           }
         }

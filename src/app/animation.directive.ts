@@ -1,5 +1,6 @@
 import {
   animate,
+  animateChild,
   AnimationBuilder,
   AnimationMetadata,
   style,
@@ -83,6 +84,8 @@ export class AnimationDirective implements OnInit {
       window.removeEventListener('scroll', this.onscroll);
       window.removeEventListener('resize', this.onscroll);
       window.removeEventListener('orientationChange', this.onscroll);
+
+      this.renderer.removeAttribute(this.hostEl, 'style');
     }
 
     clearTimeout(this.timeout);
@@ -102,6 +105,7 @@ export class AnimationDirective implements OnInit {
         }`,
         style({ opacity: 1, transform: 'translate(0, 0) scale(1)' })
       ),
+      animateChild(),
     ];
   }
 

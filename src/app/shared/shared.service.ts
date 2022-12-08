@@ -8,11 +8,11 @@ import { delay, of } from 'rxjs';
 export class SharedService {
   constructor(private router: Router) {}
 
-  navigate(page: string) {
+  navigate(page: string, fragment?: string) {
     return of('navigate')
       .pipe(delay(300))
       .subscribe(() => {
-        this.router.navigate([page]);
+        this.router.navigate([page], { fragment });
       });
   }
 }

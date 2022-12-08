@@ -49,7 +49,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 
   &:focus {
     outline: none;
@@ -92,6 +92,7 @@
   --black-80: #aeb5bc;
   --black-90: #dbdee1;
   --black-100: #fdfdfe;
+  --caution-orange: #f07a25;
 }
 
 html,
@@ -115,6 +116,9 @@ main {
 
   @media screen and (min-width: $lg) {
     padding-top: toRem(78);
+  }
+  @media screen and (min-width: $lg) {
+    padding-top: toRem(110);
   }
 }
 

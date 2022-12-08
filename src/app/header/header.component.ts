@@ -1,4 +1,4 @@
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -7,8 +7,8 @@ import {
   PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Route, Router } from '@angular/router';
-import { delay, share } from 'rxjs';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { delay } from 'rxjs';
 import { SharedService } from '../shared/shared.service';
 
 @Component({
@@ -35,13 +35,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('resize', () => {
-        if (innerWidth >= 1024) this.closeNav();
-      });
-    }
-  }
+  ngOnInit(): void {}
 
   toggleNav() {
     const toggleBtn: HTMLElement = this.toggleBtn.nativeElement as HTMLElement;

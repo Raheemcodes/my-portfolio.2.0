@@ -1,0 +1,70 @@
+@import "./../shared/shared";
+
+:host {
+  @include display-flex();
+
+  margin: toRem(-4) toRem(16) 0;
+
+  @media screen and (min-width: $md) {
+    margin: toRem(-8) 0 0;
+  }
+
+  animation: fadeIn 2s ease-out;
+}
+
+.caution-container {
+  @include centered();
+  position: relative;
+  background-color: var(--caution-orange);
+  padding: 0 toRem(10);
+  border-radius: toRem(4) 0 0 toRem(4);
+
+  @media screen and (min-width: $lg) {
+    padding: 0 toRem(12);
+  }
+  img {
+    flex-shrink: 0;
+    width: toRem(18);
+    height: auto;
+
+    @media screen and (min-width: $lg) {
+      width: toRem(24);
+    }
+  }
+
+  .pointer {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: toRem(7) solid transparent;
+    border-right: toRem(7) solid transparent;
+    border-bottom: toRem(8) solid var(--caution-orange);
+    top: toRem(-8);
+  }
+}
+
+.message {
+  @include centered();
+  padding: toRem(10) toRem(16);
+  color: var(--black-90);
+  font-size: toRem(12);
+  line-height: toRem(16);
+  font-weight: 500;
+  background: var(--black-30);
+  border-radius: 0 toRem(4) toRem(4) 0;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(16);
+    line-height: toRem(16);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

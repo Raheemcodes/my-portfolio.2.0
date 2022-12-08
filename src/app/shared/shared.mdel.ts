@@ -9,11 +9,11 @@ export interface Card {
   path: string;
 }
 
-export interface CaseStudy {
+export interface Project {
   title: string;
   img: string;
   desc: string;
   areas: string[];
-  link: string;
+  link: { github: string; website?: string };
   background: string;
 }

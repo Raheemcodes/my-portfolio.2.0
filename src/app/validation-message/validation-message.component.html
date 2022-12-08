@@ -1,0 +1,15 @@
+<div class="caution-container">
+  <div class="pointer"></div>
+
+  <img
+    width="36"
+    height="36"
+    ngSrc="./../../assets/icons/Error.png"
+    alt
+    (error)="$any($event.currentTarget).style.display = 'none'"
+  />
+</div>
+
+<div class="message">
+  <ng-content></ng-content>
+</div>

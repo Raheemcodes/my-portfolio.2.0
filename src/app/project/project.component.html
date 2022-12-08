@@ -1,1 +1,86 @@
-<p>project works!</p>
+<main id="project">
+  <h2 class="title">
+    <span>Projects</span>
+    <h4 class="main-title">My Projects</h4>
+  </h2>
+
+  <ul class="project-list">
+    <li
+      class="project"
+      *ngFor="let project of projects; let i = index"
+      aray-animate="fadeIn"
+      aray-offsetY="20%"
+      aray-duration="400ms"
+      aray-delay="200ms"
+    >
+      <div class="img-cover" [style.backgroundColor]="project.background">
+        <img
+          [ngSrc]="project.img"
+          alt
+          fill
+          [priority]="i == 0 ? true : false"
+          (error)="$any($event.currentTarget).style.display = 'none'"
+        />
+      </div>
+
+      <div class="content">
+        <h2
+          class="project-title"
+          aray-animate="fadeIn"
+          aray-offsetX="5%"
+          aray-duration="500ms"
+          aray-delay="500ms"
+        >
+          {{ project.title }}
+        </h2>
+
+        <p
+          class="project-desc"
+          aray-animate="fadeIn"
+          aray-offsetY="20%"
+          aray-duration="500ms"
+          aray-delay="500ms"
+        >
+          {{ project.desc }}
+        </p>
+
+        <ul
+          class="project-areas"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="500ms"
+          aray-delay="500ms"
+        >
+          <li class="project-area" *ngFor="let area of project.areas">
+            {{ area }}
+          </li>
+        </ul>
+
+        <div class="link-container">
+          <a
+            [href]="project.link.github"
+            target="_blank"
+            class="link"
+            aray-animate="fadeIn"
+            aray-offsetX="15%"
+            aray-duration="500ms"
+            aray-delay="500ms"
+            >View Github</a
+          >
+          <a
+            [href]="project.link.website"
+            target="_blank"
+            class="link"
+            aray-animate="fadeIn"
+            aray-offsetX="-15%"
+            aray-duration="500ms"
+            aray-delay="500ms"
+            >View Website</a
+          >
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <app-footer></app-footer>
+</main>

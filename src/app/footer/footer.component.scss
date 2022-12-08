@@ -1,0 +1,30 @@
+@import "./../shared/shared";
+
+:host {
+  @include column-centered();
+  gap: toRem(70);
+  padding-bottom: toRem(48);
+
+  @media screen and (min-width: $md) {
+    gap: toRem(91);
+    padding-bottom: toRem(89);
+  }
+  @media screen and (min-width: $md) {
+    padding-bottom: toRem(140);
+  }
+}
+
+app-socials {
+  margin: 0;
+}
+
+p {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(24);
+
+  @media screen and (min-width: $md) {
+    font-size: toRem(24);
+    line-height: toRem(24);
+  }
+}

@@ -1,0 +1,218 @@
+@import "./../shared/shared";
+
+#project {
+  width: 100%;
+  padding: toRem(69) toRem(16) 0;
+
+  @media screen and (min-width: $lg) {
+    padding: toRem(78) toRem(80) 0;
+  }
+  @media screen and (min-width: $two-xl) {
+    padding: toRem(110) toRem(131) 0;
+  }
+}
+
+.title {
+  position: relative;
+  @include centered();
+  margin: toRem(64) auto toRem(81);
+
+  @media screen and (min-width: $lg) {
+    margin: toRem(124) auto toRem(188);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin: toRem(124) auto;
+  }
+
+  span {
+    font-size: toRem(88);
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--black-20);
+
+    @media screen and (min-width: $lg) {
+      font-size: toRem(140);
+      line-height: toRem(128);
+    }
+    @media screen and (min-width: $lg) {
+      font-size: toRem(156);
+      line-height: toRem(128);
+    }
+  }
+
+  .main-title {
+    position: absolute;
+    top: 0;
+    font-size: toRem(40);
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--main-color);
+
+    @media screen and (min-width: $lg) {
+      font-size: toRem(56);
+      line-height: toRem(64);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRen(40);
+      line-height: toRem(74);
+    }
+  }
+}
+
+.project-list {
+  width: 100%;
+  list-style: none;
+  @include column-flex();
+  gap: toRem(119);
+  margin-bottom: toRem(204);
+
+  @media screen and (min-width: $lg) {
+    gap: toRem(144);
+    margin-bottom: toRem(280);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin-bottom: toRem(300);
+  }
+}
+
+.project {
+  @include column-flex();
+  gap: toRem(16);
+  width: 100%;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    @include between-centered();
+    gap: toRem(32);
+    flex-direction: row-reverse;
+  }
+  @media screen and (min-width: $two-xl) {
+    gap: toRem(82);
+  }
+}
+
+.img-cover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: toRem(8);
+  height: calc(210 / 343) * 100vw;
+
+  @media screen and (min-width: $md) {
+    max-width: toRem(639);
+    width: auto;
+    flex: 1;
+  }
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(850);
+  }
+
+  @supports (aspect-ratio: 210/343) {
+    aspect-ratio: 343/210;
+    height: auto;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.content {
+  @include column-flex();
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    flex: 1;
+    max-width: toRem(500);
+    gap: toRem(28);
+  }
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(638);
+    gap: toRem(40);
+  }
+}
+
+.project-title {
+  font-size: toRem(24);
+  font-weight: 700;
+  line-height: toRem(38);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(56);
+    line-height: toRem(64);
+  }
+}
+
+.project-desc {
+  font-size: toRem(16);
+  font-weight: 400;
+  line-height: toRem(24);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    font-weight: 500;
+    line-height: toRem(40);
+  }
+}
+
+.project-areas {
+  list-style: none;
+  @include display-flex();
+  flex-wrap: wrap;
+  gap: toRem(16);
+
+  @media screen and (min-width: $three-xl) {
+    gap: toRem(24);
+  }
+}
+
+.project-area {
+  font-size: toRem(10);
+  font-weight: 400;
+  color: var(--black-70);
+  padding: toRem(12) toRem(24);
+  border-radius: toRem(24);
+  background-color: var(--black-20);
+  flex-shrink: 0;
+
+  @media screen and (min-width: $xl) {
+    font-size: toRem(14);
+  }
+
+  @media screen and (min-width: $three-xl) {
+    font-size: toRem(18);
+  }
+}
+
+.link-container {
+  @include display-flex();
+  gap: toRem(24);
+
+  @media screen and (min-width: $lg) {
+    gap: toRem(56);
+  }
+}
+
+.link {
+  font-size: toRem(17);
+  font-weight: 500;
+  line-height: toRem(23);
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(20);
+    line-height: toRem(27);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--main-purple);
+      border-bottom: 2px solid var(--main-purple);
+    }
+  }
+}

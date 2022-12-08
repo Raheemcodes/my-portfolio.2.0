@@ -113,7 +113,10 @@ main {
   border-radius: toRem(64);
   padding: toRem(16) toRem(24);
   border: 2px solid var(--black-90);
-  animation: infinite-down 3.5s ease-out infinite 1s;
+
+  &.infite-translate {
+    animation: fadeIn 3s ease-out, infinite-down 3.5s ease-out infinite;
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -131,13 +134,17 @@ main {
   }
 }
 
-section {
+#about,
+#skills,
+#projects,
+#contact {
   width: 100%;
   @include column-flex();
   padding-bottom: toRem(64);
+  overflow-x: hidden;
 
   @media screen and (min-width: $md) {
-    padding-bottom: toRem(64);
+    padding-bottom: toRem(164);
   }
 }
 
@@ -147,10 +154,10 @@ section {
   margin: toRem(24) auto toRem(64);
 
   @media screen and (min-width: $md) {
-    margin: toRem(124) auto toRem(88);
+    margin: toRem(24) auto toRem(88);
   }
   @media screen and (min-width: $two-xl) {
-    margin: toRem(128) auto;
+    margin: toRem(24) auto toRem(128);
   }
 
   span {
@@ -163,7 +170,7 @@ section {
       font-size: toRem(140);
       line-height: toRem(128);
     }
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: $two-xl) {
       font-size: toRem(156);
       line-height: toRem(128);
     }
@@ -240,11 +247,6 @@ section {
       color: var(--black-20);
     }
   }
-}
-
-#skills {
-  width: 100%;
-  padding-bottom: toRem(24);
 }
 
 .skills-main__container {
@@ -371,6 +373,299 @@ section {
   }
 }
 
+.projects-list {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: toRem(40);
+
+  @media screen and (min-width: $sm) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: toRem(32);
+  }
+  @media screen and (min-width: $two-xl) {
+    gap: toRem(56);
+  }
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  height: calc(215 / 375) * 100vw;
+  background-color: var(--main-color);
+  overflow: hidden;
+
+  @supports (aspect-ratio: 343/215) {
+    aspect-ratio: 343/215;
+    height: auto;
+  }
+
+  @media screen and (min-width: $sm) {
+    height: calc(342 / 1194) * 100vw;
+
+    @supports (aspect-ratio: 343/215) {
+      aspect-ratio: none;
+    }
+
+    &.span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.project-backdrop {
+  @include column-centered();
+  padding: 1rem;
+  gap: toRem(8);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba($color: #000, $alpha: 0.5);
+
+  @media (hover: hover) {
+    background: rgba(141, 58, 248, 0.8);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+  }
+
+  @include fade-hover(opacity, 300ms, 1);
+}
+
+.project-title {
+  font-size: toRem(20);
+  font-weight: 700;
+  line-height: toRem(27);
+  text-align: center;
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(40);
+    line-height: toRem(54);
+  }
+}
+
+.project-sub__title {
+  font-size: toRem(14);
+  font-weight: 500;
+  line-height: toRem(19);
+  color: var(--black-90);
+  text-align: center;
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(18);
+    line-height: toRem(24);
+  }
+}
+
+.project-cta {
+  align-self: center;
+  margin-top: toRem(64);
+}
+
+#contact {
+  padding-bottom: 0;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    padding-bottom: 0;
+  }
+}
+
+.contact-list {
+  width: 100%;
+  list-style: none;
+  @include column-centered();
+  gap: toRem(88);
+
+  @media screen and (min-width: $md) {
+    @include between();
+    gap: toRem(32);
+  }
+}
+
+.contact-details {
+  // width: 100%;
+  @include column-centered();
+  gap: toRem(32);
+
+  .icon-cover {
+    width: toRem(128);
+    height: toRem(128);
+    border-radius: 50%;
+    background-color: var(--main-purple);
+    @include centered();
+
+    @media screen and (min-width: $two-xl) {
+      width: toRem(138);
+      height: toRem(138);
+    }
+
+    img {
+      width: toRem(40);
+      height: auto;
+    }
+  }
+}
+
+.contact-details-title {
+  font-size: toRem(26);
+  font-weight: 700;
+  line-height: toRem(35);
+  text-align: center;
+  color: var(--black-90);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(32);
+    line-height: toRem(43);
+  }
+}
+
+.contact-id {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(24);
+  text-align: center;
+  color: var(--black-90);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+}
+
+form {
+  margin: toRem(56) 0 toRem(95);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    margin: toRem(91) 0 toRem(134);
+    grid-template-columns: 1fr 1fr;
+    gap: toRem(24) toRem(32);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin: toRem(124) 0 toRem(134);
+    gap: toRem(48) toRem(190);
+  }
+}
+
+.form-control {
+  width: 100%;
+  @include column-flex();
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    gap: toRem(24);
+
+    &.span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  label {
+    font-size: toRem(18);
+    font-weight: 500;
+    line-height: toRem(24);
+    color: var(--black-90);
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(20);
+      line-height: toRem(27);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(28);
+      line-height: toRem(38);
+    }
+  }
+
+  input {
+    height: toRem(60);
+
+    @media screen and (min-width: $md) {
+      height: toRem(85);
+    }
+    @media screen and (min-width: $two-xl) {
+      height: toRem(102);
+    }
+  }
+
+  textarea {
+    height: toRem(237);
+
+    @media screen and (min-width: $md) {
+      height: toRem(350);
+    }
+    @media screen and (min-width: $two-xl) {
+      height: toRem(546);
+    }
+  }
+
+  .typo {
+    padding: toRem(10) toRem(14);
+    font-size: toRem(14);
+    font-weight: 400;
+    line-height: toRem(22);
+    color: var(--main-color);
+    border: 1.5px solid var(--black-30);
+    background-color: #0000;
+    border-radius: toRem(8);
+
+    &:focus {
+      border: 1.5px solid var(--main-purple);
+    }
+
+    @media screen and (min-width: $md) {
+      padding: toRem(24);
+      font-size: toRem(18);
+      line-height: toRem(29);
+    }
+    @media screen and (min-width: $two-xl) {
+      padding: toRem(32) toRem(24);
+      font-size: toRem(24);
+      line-height: toRem(38);
+    }
+  }
+}
+
+.form-btn {
+  background-color: var(--main-purple);
+  color: var(--black-90);
+  justify-self: center;
+  margin-top: toRem(32 - 16);
+  font-size: toRem(12);
+  font-weight: 700;
+  line-height: toRem(14);
+  border-radius: toRem(64);
+  padding: toRem(20) toRem(36);
+  opacity: 1;
+
+  @media screen and (min-width: $md) {
+    margin-top: toRem(88 - 24);
+    grid-column: span 2;
+    padding: toRem(32) toRem(56);
+    font-size: toRem(18);
+    line-height: toRem(24);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin-top: toRem(88 - 48);
+  }
+
+  @include fade-hover(opacity, 300ms, 0.7);
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
 @keyframes infinite-down {
   0% {
     transform: translateY(0%);
@@ -380,5 +675,14 @@ section {
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
   }
 }

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
       target="_blank"
       href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQG_LDjTB5lqxAAAAYFVzi_oER890lDPvsRzw8MNl0Kz0rlihTq6hE_99zge1FKcvaq5AyskJOPlltaiOjj6Coe6Kv73WPABz0IS34cbrYF3YtOVrdz_hC9sithpSwf6hNM-lWc=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fabdulraheem-yusuf-b99bb1234"
     >
-      <img ngSrc="./../../assets/icons/LinkedIn.png" alt fill />
+      <img ngSrc="./../../assets/icons/LinkedIn.png" alt fill priority />
     </a>
     <a
       class="link-img__container"
@@ -17,15 +17,15 @@ import { Component } from '@angular/core';
       target="_blank"
       href="https://github.com/Raheemcodes"
     >
-      <img ngSrc="./../../assets/icons/GitHub.png" alt fill />
+      <img ngSrc="./../../assets/icons/GitHub.png" alt fill priority />
     </a>
     <a
       class="link-img__container"
       title="StackBlitz Profile"
       target="_blank"
-      href="."
+      href="https://stackblitz.com/@Raheemcodes"
     >
-      <img ngSrc="./../../assets/icons/StackBlitz.png" alt fill />
+      <img ngSrc="./../../assets/icons/StackBlitz.png" alt fill priority />
     </a>
     <a
       class="link-img__container"
@@ -33,7 +33,7 @@ import { Component } from '@angular/core';
       target="_blank"
       href="https://twitter.com/raheemscorp?s=20&t=7mtcCzsfzRE810cRUiSypg"
     >
-      <img ngSrc="./../../assets/icons/Twitter.png" alt fill />
+      <img ngSrc="./../../assets/icons/Twitter.png" alt fill priority />
     </a>
   `,
   styles: [
