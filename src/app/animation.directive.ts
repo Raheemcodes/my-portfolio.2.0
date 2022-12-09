@@ -84,8 +84,6 @@ export class AnimationDirective implements OnInit {
       window.removeEventListener('scroll', this.onscroll);
       window.removeEventListener('resize', this.onscroll);
       window.removeEventListener('orientationChange', this.onscroll);
-
-      this.renderer.removeAttribute(this.hostEl, 'style');
     }
 
     clearTimeout(this.timeout);

@@ -27,7 +27,7 @@ export class ProjectComponent {
       background: '#e1e8e0',
       link: {
         github: 'https://github.com/Raheemcodes/YCT-Attendance-Collator',
-        website: '.',
+        website: 'https://yct-attendance-collator.onrender.com',
       },
     },
     {
@@ -116,7 +116,7 @@ export class ProjectComponent {
       background: '#4E6776',
       link: {
         github: 'https://github.com/Raheemcodes/Phone-store',
-        website: '.',
+        website: 'https://ibeemay.onrender.com/',
       },
     },
   ];

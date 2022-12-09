@@ -647,6 +647,7 @@ form {
   border-radius: toRem(64);
   padding: toRem(20) toRem(36);
   opacity: 1;
+  animation: fadeIn 3s ease-out;
 
   @media screen and (min-width: $md) {
     margin-top: toRem(88 - 24);
