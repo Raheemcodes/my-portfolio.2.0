@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     public sharedService: SharedService
   ) {
-    this.router.events.pipe(delay(200)).subscribe((event) => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) this.closeNav();
     });
   }

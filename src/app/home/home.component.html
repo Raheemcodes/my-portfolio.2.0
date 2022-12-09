@@ -11,7 +11,7 @@
 
     <div class="intro">
       <div class="intro-msg">
-        <h4
+        <div
           class="welcome-msg"
           aray-animate="fadeIn"
           aray-duration="800ms"
@@ -19,8 +19,8 @@
           aray-delay="300ms"
         >
           Hello World!
-        </h4>
-        <h2
+        </div>
+        <div
           class="name"
           aray-animate="fadeIn"
           aray-offsetY="30%"
@@ -28,8 +28,8 @@
           aray-delay="500ms"
         >
           I’m <span>Yusuf Abdulraheem</span>
-        </h2>
-        <h4
+        </div>
+        <div
           class="job-title"
           aray-animate="fadeIn"
           aray-offsetY="-40%"
@@ -37,7 +37,7 @@
           aray-delay="300ms"
         >
           A full stack web developer
-        </h4>
+        </div>
       </div>
 
       <button
@@ -76,7 +76,7 @@
       aray-delay="300ms"
     >
       <span>About</span>
-      <h4
+      <div
         class="main-title"
         aray-animate="fadeIn"
         aray-offsetY="125%"
@@ -84,7 +84,7 @@
         aray-delay="300ms"
       >
         About Me
-      </h4>
+      </div>
     </h2>
 
     <p
@@ -106,7 +106,9 @@
     </p>
 
     <div class="about-btn__container">
-      <button
+      <a
+        href="mailto:raheemscorporatemail@gmail.com"
+        title="Mail me"
         appClick
         class="purple"
         aray-animate="fadeIn"
@@ -115,8 +117,11 @@
         aray-delay="500ms"
       >
         HIRE ME
-      </button>
-      <button
+      </a>
+      <a
+        href="./../../assets/file/resume.pdf"
+        target="_blank"
+        title="My Resume"
         appClick
         class="white"
         aray-animate="fadeIn"
@@ -125,7 +130,7 @@
         aray-delay="500ms"
       >
         RESUME
-      </button>
+      </a>
     </div>
   </section>
 
@@ -138,7 +143,7 @@
       aray-delay="300ms"
     >
       <span>Skills</span>
-      <h4
+      <div
         class="main-title"
         aray-animate="fadeIn"
         aray-offsetY="125%"
@@ -146,7 +151,7 @@
         aray-delay="300ms"
       >
         Skills
-      </h4>
+      </div>
     </h2>
 
     <div class="skills-main__container">
@@ -401,7 +406,7 @@
       aray-delay="300ms"
     >
       <span>Projects</span>
-      <h4
+      <div
         class="main-title"
         aray-animate="fadeIn"
         aray-offsetY="125%"
@@ -409,7 +414,7 @@
         aray-delay="300ms"
       >
         My Projects
-      </h4>
+      </div>
     </h2>
 
     <ul class="projects-list">
@@ -544,7 +549,7 @@
       aria-label="View more project button"
       class="cta project-cta"
     >
-      <span>view more</span>
+      <span>View more</span>
 
       <img
         width="24"
@@ -566,7 +571,7 @@
       aray-delay="300ms"
     >
       <span>Contact</span>
-      <h4
+      <div
         class="main-title"
         class="main-title"
         aray-animate="fadeIn"
@@ -575,7 +580,7 @@
         aray-delay="300ms"
       >
         Contact Me
-      </h4>
+      </div>
     </h2>
 
     <ul class="contact-list">
@@ -594,7 +599,7 @@
             alt
           />
         </div>
-        <h3
+        <div
           class="contact-details-title"
           aray-animate="fadeIn"
           aray-offsetY="30%"
@@ -602,8 +607,8 @@
           aray-delay="500ms"
         >
           INSTAGRAM
-        </h3>
-        <h5
+        </div>
+        <div
           class="contact-id"
           aray-animate="fadeIn"
           aray-offsetY="-30%"
@@ -611,7 +616,7 @@
           aray-delay="800ms"
         >
           @Raheem.codes
-        </h5>
+        </div>
       </li>
 
       <li class="contact-details">
@@ -629,7 +634,7 @@
             alt
           />
         </div>
-        <h3
+        <div
           class="contact-details-title"
           aray-animate="fadeIn"
           aray-offsetY="30%"
@@ -637,8 +642,8 @@
           aray-delay="500ms"
         >
           EMAIL ADDRESS
-        </h3>
-        <h5
+        </div>
+        <div
           class="contact-id"
           aray-animate="fadeIn"
           aray-offsetY="-30%"
@@ -646,7 +651,7 @@
           aray-delay="800ms"
         >
           Raheemscorporatemail@gmail.com
-        </h5>
+        </div>
       </li>
 
       <li class="contact-details">
@@ -664,7 +669,7 @@
             alt
           />
         </div>
-        <h3
+        <div
           class="contact-details-title"
           aray-animate="fadeIn"
           aray-offsetY="30%"
@@ -672,8 +677,8 @@
           aray-delay="500ms"
         >
           TWITTER PROFILE
-        </h3>
-        <h5
+        </div>
+        <div
           class="contact-id"
           aray-animate="fadeIn"
           aray-offsetY="-30%"
@@ -681,7 +686,7 @@
           aray-delay="800ms"
         >
           @raheemscorp
-        </h5>
+        </div>
       </li>
     </ul>
 
@@ -694,7 +699,7 @@
         aray-delay="650ms"
       >
         <label for="name">Name</label>
-        <input class="typo" type="text" formControlName="name" />
+        <input class="typo" type="text" id="name" formControlName="name" />
 
         <app-validation-message *ngIf="name.invalid && name.touched">
           Please fill out this field.
@@ -709,7 +714,7 @@
         aray-delay="650ms"
       >
         <label for="email">Email</label>
-        <input class="typo" type="email" formControlName="email" />
+        <input class="typo" type="email" id="email" formControlName="email" />
 
         <app-validation-message *ngIf="email.invalid && email.touched">
           Please enter a valid email address.
@@ -724,20 +729,27 @@
         aray-delay="650ms"
       >
         <label for="message">Message</label>
-        <textarea class="typo" formControlName="message"></textarea>
+        <textarea
+          class="typo"
+          id="message"
+          formControlName="message"
+        ></textarea>
 
         <app-validation-message *ngIf="msg.invalid && msg.touched">
           Please fill out this field.
         </app-validation-message>
       </div>
 
+      <div *ngIf="loading" class="loading-spinner"></div>
+
       <button
+        *ngIf="!loading"
         appClick
         class="form-btn"
         type="submit"
         [disabled]="msgForm.invalid"
       >
-        SUBMIT
+        {{ _success ? "SUCCESS" : "SUBMIT" }}
       </button>
     </form>
   </section>

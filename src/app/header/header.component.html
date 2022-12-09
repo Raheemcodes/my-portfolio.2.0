@@ -3,9 +3,9 @@
     <img
       width="200"
       height="58"
-      src="./../../assets/icons/Logo.png"
-      loading="lazy"
+      ngSrc="./../../assets/icons/Logo.png"
       alt
+      priority
     />
   </div>
 
@@ -39,12 +39,7 @@
       >
         Skills.
       </li>
-      <li
-        class="nav-item"
-        routerLink="/"
-        fragment="projects"
-        [class.active]="(activeFragment | async) == 'projects'"
-      >
+      <li class="nav-item" routerLink="/projects" routerLinkActive="active">
         Projects.
       </li>
       <li

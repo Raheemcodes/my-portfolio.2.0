@@ -105,7 +105,7 @@ export class ProjectComponent {
       background: '#E6C0BD',
       link: {
         github: 'https://github.com/Raheemcodes/Royale-biba-shop',
-        website: '.',
+        website: 'https://royalebiba-angular.web.app/',
       },
     },
     {

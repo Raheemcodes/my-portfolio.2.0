@@ -220,7 +220,7 @@ main {
     gap: toRem(124);
   }
 
-  button {
+  a {
     font-size: toRem(12);
     font-weight: 700;
     line-height: 1.17em;
@@ -660,10 +660,44 @@ form {
     margin-top: toRem(88 - 48);
   }
 
-  @include fade-hover(opacity, 300ms, 0.7);
+  @include fade-hover(opacity, 300ms, 0.8);
 
   &:disabled {
-    opacity: 0.7;
+    opacity: 0.5;
+    cursor: no-drop;
+  }
+}
+
+.loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: toRem(6) solid var(--main-purple);
+  border-left-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-self: center;
+  margin-top: toRem(32 - 16);
+  animation: fadeIn 300ms ease-out, spin 500ms ease-out infinite;
+
+  @media screen and (min-width: $md) {
+    width: 2rem;
+    height: 2rem;
+    grid-column: span 2;
+    margin-top: toRem(88 - 24);
+  }
+  @media screen and (min-width: $two-xl) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: toRem(88 - 48);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
   }
 }
 

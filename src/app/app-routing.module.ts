@@ -13,6 +13,7 @@ const route: Routes = [
   declarations: [],
   imports: [
     RouterModule.forRoot(route, {
+      initialNavigation: 'enabledBlocking',
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
     }),

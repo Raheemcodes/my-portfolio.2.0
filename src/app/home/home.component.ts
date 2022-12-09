@@ -19,7 +19,15 @@ export class HomeComponent implements OnInit {
       Validators.required,
     ]),
   });
-  restApi: string = environment.REST_API;
+  loading: boolean = false;
+  set success(val: boolean) {
+    this._success = val;
+
+    setTimeout(() => {
+      this._success = false;
+    }, 2000);
+  }
+  _success: boolean = false;
 
   constructor(public sharedSv: SharedService, private http: HttpClient) {}
 
@@ -36,18 +44,25 @@ export class HomeComponent implements OnInit {
   }
 
   submit() {
-    const { name, email, message } = this.msgForm.value;
+    if (!this.loading && !this.success) {
+      this.loading = true;
+      const { name, email, message } = this.msgForm.value;
 
-    this.postData(name, email, message).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-    });
+      this.postData(name, email, message).subscribe({
+        next: (data) => {
+          console.log(data);
+          setTimeout(() => {
+            this.loading = false;
+            this.success = true;
+          }, 3000);
+        },
+      });
+    }
   }
 
   postData(name: string, email: string, message: string) {
     return this.http
-      .post<{ message: string }>(this.restApi + '/mail-api', {
+      .post<{ message: string }>(environment.REST_API + '/mail-api', {
         name,
         email,
         message,
