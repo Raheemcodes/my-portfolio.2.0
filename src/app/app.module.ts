@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import { SocialsComponent } from './socials/socials.component';
 import { ValidationMessageComponent } from './validation-message/validation-message.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ValidationMessageComponent } from './validation-message/validation-mess
     FooterComponent,
     SocialsComponent,
     ValidationMessageComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,6 +38,8 @@ export class ClickDirective implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.renderer.setStyle(this.elRef.nativeElement, 'overflow', 'hidden');
+
     // Block children from intercepting the offset coordinates
     Array.from(this.elRef.nativeElement.children).forEach((el) => {
       const child = el as HTMLElement;

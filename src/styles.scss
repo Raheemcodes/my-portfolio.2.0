@@ -155,3 +155,12 @@ img[alt] {
     padding: 1rem;
   }
 }
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(540deg);
+  }
+}

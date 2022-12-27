@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <button
+      <div
         appClick="light"
         (click)="sharedSv.navigate('/', 'about')"
         aria-label="about me button"
@@ -56,7 +56,7 @@
           alt
           (error)="$any($event.currentTarget).style.display = 'none'"
         />
-      </button>
+      </div>
     </div>
 
     <app-socials
@@ -740,19 +740,30 @@
         </app-validation-message>
       </div>
 
-      <div *ngIf="loading" class="loading-spinner"></div>
-
       <button
-        *ngIf="!loading"
+        [disabled]="msgForm.invalid"
         appClick
         class="form-btn"
         type="submit"
-        [disabled]="msgForm.invalid"
       >
-        {{ _success ? "SUCCESS" : "SUBMIT" }}
+        <img
+          *ngIf="loading"
+          class="loading-spinner"
+          width="46"
+          height="46"
+          ngSrc="./../../assets/icons/loading-spinner.svg"
+          alt
+          priority
+        />
+
+        <ng-container *ngIf="!loading">SUBMIT</ng-container>
       </button>
+
+      <p class="error-msg" *ngIf="error">Something went wrong</p>
     </form>
   </section>
+
+  <app-success *ngIf="success" (close)="onclose()"></app-success>
 
   <section id="footer">
     <app-footer></app-footer>

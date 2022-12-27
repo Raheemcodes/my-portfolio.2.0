@@ -1,0 +1,98 @@
+@import "./../shared/shared";
+
+:host {
+  @include column-centered();
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  background-color: var(--main-black);
+  z-index: 3;
+}
+
+.check-main__cover {
+  @include centered();
+  width: toRem(112);
+  height: toRem(112);
+  background-color: var(--main-purple);
+  border-radius: 50%;
+  margin-bottom: toRem(48);
+
+  @media screen and (min-width: $md) {
+    width: toRem(138);
+    height: toRem(138);
+    margin-bottom: toRem(64);
+  }
+  @media screen and (min-width: $two-xl) {
+    width: toRem(180);
+    height: toRem(180);
+    margin-bottom: toRem(72);
+  }
+
+  .checkmark-cover {
+    position: relative;
+    @include centered();
+    width: toRem(50);
+    height: toRem(30);
+
+    @media screen and (min-width: $two-xl) {
+      width: toRem(60);
+      height: toRem(35);
+    }
+    @media screen and (min-width: $two-xl) {
+      width: toRem(80);
+      height: toRem(50);
+    }
+
+    .checkmark {
+      width: 100%;
+      height: 100%;
+      border: toRem(8) solid var(--main-black);
+      border-top: #0000;
+      border-right: #0000;
+      position: absolute;
+      top: toRem(-8);
+      transform: rotate(-45deg);
+
+      @media screen and (min-width: $two-xl) {
+        border: toRem(12) solid var(--main-black);
+        border-top: #0000;
+        border-right: #0000;
+      }
+    }
+  }
+}
+
+p {
+  font-size: toRem(24);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: toRem(80);
+
+  @media screen and (min-width: $md) {
+    font-size: toRem(48);
+    margin-bottom: toRem(112);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(64);
+  }
+}
+
+button {
+  font-size: toRem(14);
+  font-weight: 700;
+  line-height: toRem(24);
+  color: var(--black-90);
+  background: var(--main-purple);
+  border-radius: toRem(63);
+  padding: toRem(24) toRem(32);
+  @include fade-hover(opacity, 200ms, 0.7);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(18);
+    border: toRem(12) solid var(--main-black);
+    border-top: #0000;
+    border-right: #0000;
+    padding: toRem(32) toRem(56);
+  }
+}
