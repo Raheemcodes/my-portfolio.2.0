@@ -1,0 +1,13 @@
+[debug] [2023-02-06T09:15:13.772Z] ----------------------------------------------------------------------
+[debug] [2023-02-06T09:15:13.774Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-06T09:15:13.776Z] CLI Version:   11.3.0
+[debug] [2023-02-06T09:15:13.776Z] Platform:      win32
+[debug] [2023-02-06T09:15:13.776Z] Node Version:  v16.16.0
+[debug] [2023-02-06T09:15:13.778Z] Time:          Mon Feb 06 2023 10:15:13 GMT+0100 (West Africa Standard Time)
+[debug] [2023-02-06T09:15:13.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-06T09:15:13.857Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-06T09:15:13.857Z] > authorizing via signed-in user (yraheem22@gmail.com)
+[debug] [2023-02-06T09:15:13.858Z] [iam] checking project raheems-port for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-06T09:15:13.863Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/raheems-port:testIamPermissions [none]
+[debug] [2023-02-06T09:15:13.864Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/raheems-port:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

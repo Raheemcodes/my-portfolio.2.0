@@ -26,8 +26,8 @@ export class ProjectComponent {
       areas: ['Angular', 'TypeScript', 'SCSS', 'Jasmine', 'Karma'],
       background: '#3A465E',
       link: {
-        github: 'https://github.com/Raheemcodes/slide-puzzle',
-        website: 'https://anime-slide-puzzle.web.app/',
+        github: 'https://github.com/Raheemcodes/space-tourium',
+        website: 'https://spacetourium.web.app/',
       },
     },
     {
