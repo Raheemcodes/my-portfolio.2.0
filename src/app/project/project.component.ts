@@ -20,6 +20,28 @@ export class ProjectComponent {
       },
     },
     {
+      title: 'Space Tourism',
+      desc: 'A multi-page web app for space tourism. This is an intermediate level challenge from frontendmentor.io',
+      img: './../../assets/projects/space-tourism.jpg',
+      areas: ['Angular', 'TypeScript', 'SCSS', 'Jasmine', 'Karma'],
+      background: '#3A465E',
+      link: {
+        github: 'https://github.com/Raheemcodes/slide-puzzle',
+        website: 'https://anime-slide-puzzle.web.app/',
+      },
+    },
+    {
+      title: 'Slide Puzzle',
+      desc: 'A web app game for 3x, 4x, 5x anime slide puzzle which uses Durstenfeld shuffle an optimized version of Fisher-Yates shuffling algorithm.',
+      img: './../../assets/projects/slide-puzzle.jpg',
+      areas: ['Angular', 'TypeScript', 'SCSS'],
+      background: '#F0FFE0',
+      link: {
+        github: 'https://github.com/Raheemcodes/slide-puzzle',
+        website: 'https://anime-slide-puzzle.web.app/',
+      },
+    },
+    {
       title: 'Attendance Collator',
       desc: 'The Attendance management system uses both password and password-less authentication (JavaScript webauthnAPI was used for its passwordless authentication); also GPS protection where necessary.',
       img: './../../assets/projects/yct.jpg',
