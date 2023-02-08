@@ -38,8 +38,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   submit() {
-    if (!this.loading && !this.success) {
+    if (this.msgForm.valid && !this.loading && !this.success) {
       this.loading = true;
+      this.error = false;
+
       const { name, email, message } = this.msgForm.value;
 
       this.postData(name, email, message).subscribe({
