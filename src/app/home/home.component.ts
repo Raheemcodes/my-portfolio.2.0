@@ -46,10 +46,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       this.postData(name, email, message).subscribe({
         next: () => {
-          setTimeout(() => {
-            this.loading = false;
-            this.success = true;
-          }, 2000);
+          this.loading = false;
+          this.success = true;
+          this.msgForm.reset();
         },
         error: (err) => {
           this.loading = false;
