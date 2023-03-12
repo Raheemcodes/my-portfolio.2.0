@@ -137,7 +137,7 @@ export class AnimationDirective implements OnInit {
       if (boundingClientRect.top < innerHeight) this.trigger();
 
       // shorten animation delay of element below viewport
-      if (boundingClientRect.top >= innerHeight) this.delay = '100ms';
+      if (boundingClientRect.top >= innerHeight) this.delay = '0.1s';
     }, 1);
   }
 
