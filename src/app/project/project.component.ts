@@ -9,6 +9,17 @@ import { Project } from '../shared/shared.mdel';
 export class ProjectComponent {
   projects: Project[] = [
     {
+      title: 'Weather App',
+      desc: 'A weather forecast web app with hourly and daily weather prediction for any location.',
+      img: './../../assets/projects/weather-app.jpg',
+      areas: ['Angular', 'SCSS', 'TypeScript', 'Jasmine', 'Karma'],
+      background: '#7da4c3',
+      link: {
+        github: 'https://github.com/Raheemcodes/e-weather',
+        website: 'https://e-web-weather.web.app/',
+      },
+    },
+    {
       title: 'Bulan',
       desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
       img: './../../assets/projects/bulan.jpg',
@@ -101,7 +112,7 @@ export class ProjectComponent {
       title: 'Angular Biometrics',
       desc: 'I embarked on this project to further improve how I make use of the JavaScript Webauthn API in the most efficient and simplest solution I can come up with.',
       img: './../../assets/projects/biometrics.jpg',
-      areas: ['Angular', 'Angular Material', 'ExpressJS', 'MongoDB'],
+      areas: ['Angular', 'Angular Material', 'ExpressJS', 'MongoDB', 'NgRx'],
       background: '#673BB7',
       link: {
         github: 'https://github.com/Raheemcodes/angular-biometrics',
