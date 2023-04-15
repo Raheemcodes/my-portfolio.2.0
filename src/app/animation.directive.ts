@@ -128,8 +128,8 @@ export class AnimationDirective implements OnInit {
           // triggers when animation is in the viewport or enters
           if (entry.isIntersecting) this.trigger();
         });
-      }
-      // { threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] }
+      },
+      { threshold: [0.5] }
     );
 
     this.timeout = setTimeout(() => {
@@ -154,7 +154,7 @@ export class AnimationDirective implements OnInit {
 
     this.timeout = setTimeout(() => {
       const SCROLLED_VIEW = scrollY + innerHeight;
-      const threshold: number = this.hostEl.clientHeight / 5;
+      const threshold: number = this.hostEl.clientHeight / 2;
       const offsetTop = this.hostEl.offsetTop + threshold;
 
       // trigger animation if 10%+ element height is within the viewport
