@@ -48,7 +48,12 @@ export class AnimationDirective implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.intersectionSupport = false;
+      this.intersectionSupport =
+        'IntersectionObserver' in window &&
+        'IntersectionObserverEntry' in window &&
+        'intersectionRatio' in window.IntersectionObserverEntry.prototype &&
+        'boundingClientRect' in window.IntersectionObserverEntry.prototype &&
+        'getBoundingClientRect' in document.documentElement;
 
       this.onload();
     }
