@@ -31,7 +31,7 @@ export class SharedService {
       },
     },
     {
-      title: 'Iphone Lockscreen(Clone)',
+      title: 'Iphone Lockscreen',
       desc: 'A clone of Iphone lock screen notification animation scroll feature.',
       img: './../../assets/projects/iphone-lockscreen.png',
       areas: ['Angular', 'TypeScript', 'SCSS'],
