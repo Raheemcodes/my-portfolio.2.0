@@ -31,6 +31,17 @@ export class SharedService {
       },
     },
     {
+      title: 'Iphone Lockscreen(Clone)',
+      desc: 'A clone of Iphone lock screen notification animation scroll feature.',
+      img: './../../assets/projects/iphone-lockscreen.png',
+      areas: ['Angular', 'TypeScript', 'SCSS'],
+      background: '#750207',
+      link: {
+        github: 'https://github.com/Raheemcodes/iphone-lock-screen',
+        website: 'https://iphone-lockscreen.web.app/',
+      },
+    },
+    {
       title: 'Space Tourism',
       desc: 'A multi-page web app for space tourism. This is an intermediate level challenge from frontendmentor.io',
       img: './../../assets/projects/space-tourism.jpg',
@@ -53,17 +64,6 @@ export class SharedService {
       },
     },
     {
-      title: 'Attendance Collator',
-      desc: 'The Attendance management system uses both password and password-less authentication (JavaScript webauthnAPI was used for its passwordless authentication); also GPS protection where necessary.',
-      img: './../../assets/projects/yct.jpg',
-      areas: ['Angular', 'ExpressJs', 'MongoDB'],
-      background: '#e1e8e0',
-      link: {
-        github: 'https://github.com/Raheemcodes/YCT-Attendance-Collator',
-        website: 'https://yct-attendance-collator.onrender.com',
-      },
-    },
-    {
       title: 'Web Portfolio',
       desc: 'I developed this portfolio for a UI/UX designer with rich animation implented by integrating angular animation withinin a stand-alone directive.',
       img: './../../assets/projects/chime.jpg',
@@ -72,6 +72,17 @@ export class SharedService {
       link: {
         github: 'https://github.com/Raheemcodes/Chime-portfolio',
         website: 'https://chimezie-portfolio.web.app/',
+      },
+    },
+    {
+      title: 'Attendance Collator',
+      desc: 'The Attendance management system uses both password and password-less authentication (JavaScript webauthnAPI was used for its passwordless authentication); also GPS protection where necessary.',
+      img: './../../assets/projects/yct.jpg',
+      areas: ['Angular', 'ExpressJs', 'MongoDB'],
+      background: '#e1e8e0',
+      link: {
+        github: 'https://github.com/Raheemcodes/YCT-Attendance-Collator',
+        website: 'https://yct-attendance-collator.onrender.com',
       },
     },
     {
