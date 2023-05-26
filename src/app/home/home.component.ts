@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(public sharedSv: SharedService, private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.projects = this.sharedSv.projects.slice(0, 6);
+    this.projects = this.sharedSv.projects.slice(0, 3);
   }
 
   get name() {

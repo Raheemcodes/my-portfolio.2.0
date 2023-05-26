@@ -86,17 +86,6 @@ export class SharedService {
       },
     },
     {
-      title: 'Date Picker',
-      desc: "Date Picker web component is a reusable custom HTML element. It provide programmers with dynamic features like the 'format', 'theme' etc.",
-      img: './../../assets/projects/date-picker-sm.png',
-      areas: ['TypeScript', 'OOP', 'Webpack'],
-      background: '#f5f5f5',
-      link: {
-        github: 'https://github.com/Raheemcodes/date-picker',
-        website: 'https://aray-date-picker.web.app/',
-      },
-    },
-    {
       title: 'Squidward',
       desc: 'Squidward is a character from my favorite cartoon series. I leisurely developed this using HTML, SCSS and webpack.',
       img: './../../assets/projects/squid.jpg',
@@ -106,6 +95,17 @@ export class SharedService {
         github: 'https://github.com/Raheemcodes/squidward',
         website:
           'https://stackblitz.com/edit/web-platform-vxtwps?file=index.html',
+      },
+    },
+    {
+      title: 'Date Picker',
+      desc: "Date Picker web component is a reusable custom HTML element. It provide programmers with dynamic features like the 'format', 'theme' etc.",
+      img: './../../assets/projects/date-picker-sm.png',
+      areas: ['TypeScript', 'OOP', 'Webpack'],
+      background: '#f5f5f5',
+      link: {
+        github: 'https://github.com/Raheemcodes/date-picker',
+        website: 'https://aray-date-picker.web.app/',
       },
     },
     {
