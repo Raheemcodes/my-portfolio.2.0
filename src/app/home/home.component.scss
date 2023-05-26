@@ -373,44 +373,153 @@ main {
   }
 }
 
-.projects-list {
+// .projects-list {
+//   width: 100%;
+//   list-style: none;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: toRem(40);
+
+//   @media screen and (min-width: $sm) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     gap: toRem(32);
+//   }
+//   @media screen and (min-width: $two-xl) {
+//     gap: toRem(56);
+//   }
+// }
+
+// .project {
+//   position: relative;
+//   width: 100%;
+//   height: calc(215 / 375) * 100vw;
+//   background-color: var(--main-color);
+//   overflow: hidden;
+
+//   @supports (aspect-ratio: 343/215) {
+//     aspect-ratio: 343/215;
+//     height: auto;
+//   }
+
+//   @media screen and (min-width: $sm) {
+//     height: calc(342 / 1194) * 100vw;
+
+//     @supports (aspect-ratio: 343/215) {
+//       aspect-ratio: none;
+//     }
+
+//     &.span-2 {
+//       grid-column: span 2;
+//     }
+//   }
+
+//   img {
+//     object-fit: cover;
+//     object-position: center top;
+//   }
+// }
+
+// .project-backdrop {
+//   @include column-centered();
+//   padding: 1rem;
+//   gap: toRem(8);
+//   position: absolute;
+//   inset: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   background-color: rgba($color: #000, $alpha: 0.5);
+
+//   @media (hover: hover) {
+//     background: rgba(141, 58, 248, 0.8);
+//     backdrop-filter: blur(4px);
+//     opacity: 0;
+//   }
+
+//   @include fade-hover(opacity, 300ms, 1);
+// }
+
+// .project-title {
+//   font-size: toRem(20);
+//   font-weight: 700;
+//   line-height: toRem(27);
+//   text-align: center;
+
+//   @media screen and (min-width: $two-xl) {
+//     font-size: toRem(40);
+//     line-height: toRem(54);
+//   }
+// }
+
+// .project-sub__title {
+//   font-size: toRem(14);
+//   font-weight: 500;
+//   line-height: toRem(19);
+//   color: var(--black-90);
+//   text-align: center;
+
+//   @media screen and (min-width: $two-xl) {
+//     font-size: toRem(18);
+//     line-height: toRem(24);
+//   }
+// }
+
+.project-cta {
+  align-self: center;
+  margin-top: toRem(64);
+}
+
+.project-list {
   width: 100%;
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: toRem(40);
+  @include column-flex();
+  gap: toRem(119);
+  // margin-bottom: toRem(204);
 
-  @media screen and (min-width: $sm) {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: toRem(32);
+  @media screen and (min-width: $lg) {
+    gap: toRem(144);
+    // margin-bottom: toRem(280);
   }
   @media screen and (min-width: $two-xl) {
-    gap: toRem(56);
+    // margin-bottom: toRem(300);
   }
 }
 
 .project {
+  @include column-flex();
+  gap: toRem(16);
+  width: 100%;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    @include between-centered();
+    gap: toRem(32);
+    flex-direction: row-reverse;
+  }
+  @media screen and (min-width: $two-xl) {
+    gap: toRem(82);
+  }
+}
+
+.img-cover {
   position: relative;
   width: 100%;
-  height: calc(215 / 375) * 100vw;
-  background-color: var(--main-color);
   overflow: hidden;
+  border-radius: toRem(8);
+  height: calc(210 / 343) * 100vw;
 
-  @supports (aspect-ratio: 343/215) {
-    aspect-ratio: 343/215;
-    height: auto;
+  @media screen and (min-width: $md) {
+    max-width: toRem(639);
+    width: auto;
+    flex: 1;
+  }
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(850);
   }
 
-  @media screen and (min-width: $sm) {
-    height: calc(342 / 1194) * 100vw;
-
-    @supports (aspect-ratio: 343/215) {
-      aspect-ratio: none;
-    }
-
-    &.span-2 {
-      grid-column: span 2;
-    }
+  @supports (aspect-ratio: 210/343) {
+    aspect-ratio: 343/210;
+    height: auto;
   }
 
   img {
@@ -419,54 +528,103 @@ main {
   }
 }
 
-.project-backdrop {
-  @include column-centered();
-  padding: 1rem;
-  gap: toRem(8);
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba($color: #000, $alpha: 0.5);
+.content {
+  @include column-flex();
+  gap: toRem(16);
 
-  @media (hover: hover) {
-    background: rgba(141, 58, 248, 0.8);
-    backdrop-filter: blur(4px);
-    opacity: 0;
+  @media screen and (min-width: $md) {
+    flex: 1;
+    max-width: toRem(500);
+    gap: toRem(28);
   }
-
-  @include fade-hover(opacity, 300ms, 1);
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(638);
+    gap: toRem(40);
+  }
 }
 
 .project-title {
-  font-size: toRem(20);
+  font-size: toRem(24);
   font-weight: 700;
-  line-height: toRem(27);
-  text-align: center;
+  line-height: toRem(38);
 
   @media screen and (min-width: $two-xl) {
-    font-size: toRem(40);
-    line-height: toRem(54);
+    font-size: toRem(56);
+    line-height: toRem(64);
   }
 }
 
-.project-sub__title {
-  font-size: toRem(14);
-  font-weight: 500;
-  line-height: toRem(19);
-  color: var(--black-90);
-  text-align: center;
+.project-desc {
+  font-size: toRem(16);
+  font-weight: 400;
+  line-height: toRem(24);
 
   @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    font-weight: 500;
+    line-height: toRem(40);
+  }
+}
+
+.project-areas {
+  list-style: none;
+  @include display-flex();
+  flex-wrap: wrap;
+  gap: toRem(16);
+
+  @media screen and (min-width: $three-xl) {
+    gap: toRem(24);
+  }
+}
+
+.project-area {
+  font-size: toRem(10);
+  font-weight: 400;
+  color: var(--black-70);
+  padding: toRem(12) toRem(24);
+  border-radius: toRem(24);
+  background-color: var(--black-20);
+  flex-shrink: 0;
+
+  @media screen and (min-width: $xl) {
+    font-size: toRem(14);
+  }
+
+  @media screen and (min-width: $three-xl) {
     font-size: toRem(18);
-    line-height: toRem(24);
   }
 }
 
-.project-cta {
-  align-self: center;
-  margin-top: toRem(64);
+.link-container {
+  @include display-flex();
+  gap: toRem(24);
+
+  @media screen and (min-width: $lg) {
+    gap: toRem(56);
+  }
+}
+
+.link {
+  font-size: toRem(17);
+  font-weight: 500;
+  line-height: toRem(23);
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(20);
+    line-height: toRem(27);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--main-purple);
+      border-bottom: 2px solid var(--main-purple);
+    }
+  }
 }
 
 #contact {

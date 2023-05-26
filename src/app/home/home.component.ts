@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { map } from 'rxjs';
 import { SharedService } from '../shared/shared.service';
 import { environment } from './../../environments/environment';
+import { Project } from '../shared/shared.model';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ import { environment } from './../../environments/environment';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  projects: Project[];
   msgForm = new FormGroup({
     email: new FormControl('', [Validators.email, Validators.required]),
     name: new FormControl('', [Validators.maxLength(50), Validators.required]),
@@ -25,7 +27,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(public sharedSv: SharedService, private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.projects = this.sharedSv.projects.slice(0, 3);
+  }
 
   get name() {
     return this.msgForm.get('name');
