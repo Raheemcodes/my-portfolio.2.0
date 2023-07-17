@@ -13,7 +13,7 @@ export class SharedService {
       desc: "An NFT Demo minting site developed using Azuki's art. It contains the list of minted NFTs and extra details about each.",
       img: './../../assets/projects/demo-minting.png',
       areas: ['Angular', 'SCSS', 'TypeScript', 'Solidity', 'Hardhat', 'Web3js'],
-      background: '#7da4c3',
+      background: '#3D1F1E',
       link: {
         github: 'https://github.com/Raheemcodes/Demo-mint_smart-contract',
         website: 'https://fir-minting-site.web.app/',
