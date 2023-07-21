@@ -15,7 +15,7 @@ export class SharedService {
       areas: ['Angular', 'SCSS', 'TypeScript', 'Solidity', 'Hardhat', 'Web3js'],
       background: '#3D1F1E',
       link: {
-        github: 'https://github.com/Raheemcodes/Demo-mint_smart-contract',
+        github: 'https://github.com/Raheemcodes/Demo-market_smart-contract',
         website: 'https://fir-minting-site.web.app/',
       },
     },
