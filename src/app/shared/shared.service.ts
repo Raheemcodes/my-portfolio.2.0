@@ -8,17 +8,26 @@ import { Project } from './shared.model';
 })
 export class SharedService {
   projects: Project[] = [
-    // {
-    //   title: 'NFT Demo Minting Site',
-    //   desc: "An NFT Demo minting site developed using Azuki's art. It contains the list of minted NFTs and extra details about each.",
-    //   img: './../../assets/projects/demo-minting.png',
-    //   areas: ['Angular', 'SCSS', 'TypeScript', 'Solidity', 'Hardhat', 'Web3js'],
-    //   background: '#3D1F1E',
-    //   link: {
-    //     github: 'https://github.com/Raheemcodes/Demo-market_smart-contract',
-    //     website: 'https://fir-minting-site.web.app/',
-    //   },
-    // },
+    {
+      title: 'NFT Demo Minting Site',
+      desc: "An NFT Demo minting site developed using Cool Cat's art. It contains the list of minted NFTs and extra details about each.",
+      img: './../../assets/projects/demo-minting.png',
+      areas: [
+        'Angular',
+        'SCSS',
+        'TypeScript',
+        'Solidity',
+        'Hardhat',
+        'Web3js',
+        'Lambda',
+        'EC2',
+      ],
+      background: '#3D1F1E',
+      link: {
+        github: 'https://github.com/Raheemcodes/Demo-market_smart-contract',
+        website: 'https://fir-minting-site.web.app/',
+      },
+    },
     {
       title: 'Weather App',
       desc: 'A weather forecast web app with hourly and daily weather prediction for any location.',
