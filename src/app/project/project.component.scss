@@ -97,6 +97,7 @@
   overflow: hidden;
   border-radius: toRem(8);
   height: calc(210 / 343) * 100vw;
+  cursor: pointer;
 
   @media screen and (min-width: $md) {
     max-width: toRem(639);

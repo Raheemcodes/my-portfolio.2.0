@@ -548,7 +548,12 @@
         aray-duration="500ms"
         aray-delay="200ms"
       >
-        <div class="img-cover" [style.backgroundColor]="project.background">
+        <a
+          [href]="project.link.website"
+          target="_blank"
+          class="img-cover"
+          [style.backgroundColor]="project.background"
+        >
           <img
             [ngSrc]="project.img"
             alt
@@ -556,7 +561,7 @@
             [priority]="i == 0 ? true : false"
             (error)="$any($event.currentTarget).style.display = 'none'"
           />
-        </div>
+        </a>
 
         <div class="content">
           <h2

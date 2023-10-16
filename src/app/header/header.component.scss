@@ -19,6 +19,7 @@
 
   .logo {
     width: toRem(97);
+    cursor: pointer;
 
     @media screen and (min-width: $lg) {
       width: toRem(111);
