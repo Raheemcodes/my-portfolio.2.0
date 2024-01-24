@@ -9,6 +9,39 @@ import { Project } from './shared.model';
 export class SharedService {
   projects: Project[] = [
     {
+      title: 'Bulan',
+      desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
+      img: './../../assets/projects/bulan.jpg',
+      areas: ['Angular', 'ExpressJs', 'TypeScript'],
+      background: '#7da4c3',
+      link: {
+        github: 'https://github.com/bulan-io',
+        website: 'https://bulan.io/',
+      },
+    },
+    {
+      title: 'Population Web App',
+      desc: "A web app for checking different country's population",
+      img: './../../assets/projects/census.png',
+      areas: ['ReactJS', 'SCSS', 'TypeScript', 'Firebase', 'FrontendMentor'],
+      background: '#FAFAFA',
+      link: {
+        github: 'https://github.com/Raheemcodes/population-web-app',
+        website: 'https://census-site.web.app/',
+      },
+    },
+    {
+      title: 'Weather App',
+      desc: 'A weather forecast web app with hourly and daily weather prediction for any location.',
+      img: './../../assets/projects/weather-app.jpg',
+      areas: ['Angular', 'SCSS', 'TypeScript', 'Jasmine', 'Karma'],
+      background: '#7da4c3',
+      link: {
+        github: 'https://github.com/Raheemcodes/e-weather',
+        website: 'https://e-web-weather.web.app/',
+      },
+    },
+    {
       title: 'NFT Demo Minting Site',
       desc: "An NFT Demo minting site developed using Cool Cat's art. It contains the list of minted NFTs and extra details about each.",
       img: './../../assets/projects/demo-minting.png',
@@ -29,36 +62,14 @@ export class SharedService {
       },
     },
     {
-      title: 'Weather App',
-      desc: 'A weather forecast web app with hourly and daily weather prediction for any location.',
-      img: './../../assets/projects/weather-app.jpg',
-      areas: ['Angular', 'SCSS', 'TypeScript', 'Jasmine', 'Karma'],
-      background: '#7da4c3',
-      link: {
-        github: 'https://github.com/Raheemcodes/e-weather',
-        website: 'https://e-web-weather.web.app/',
-      },
-    },
-    {
-      title: 'Bulan',
-      desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
-      img: './../../assets/projects/bulan.jpg',
-      areas: ['Angular', 'ExpressJs', 'TypeScript'],
-      background: '#7da4c3',
-      link: {
-        github: 'https://github.com/bulan-io',
-        website: 'https://bulan.io/',
-      },
-    },
-    {
-      title: 'Iphone Lockscreen',
-      desc: 'A clone of Iphone lock screen notification animation scroll feature.',
-      img: './../../assets/projects/iphone-lockscreen.png',
+      title: 'Web Portfolio',
+      desc: 'I developed this portfolio for a UI/UX designer with rich animation implented by integrating angular animation withinin a stand-alone directive.',
+      img: './../../assets/projects/chime.jpg',
       areas: ['Angular', 'TypeScript', 'SCSS'],
-      background: '#750207',
+      background: '#b8d3f1',
       link: {
-        github: 'https://github.com/Raheemcodes/iphone-lock-screen',
-        website: 'https://iphone-lockscreen.web.app/',
+        github: 'https://github.com/Raheemcodes/Chime-portfolio',
+        website: 'https://chimezie-portfolio.web.app/',
       },
     },
     {
@@ -84,14 +95,14 @@ export class SharedService {
       },
     },
     {
-      title: 'Web Portfolio',
-      desc: 'I developed this portfolio for a UI/UX designer with rich animation implented by integrating angular animation withinin a stand-alone directive.',
-      img: './../../assets/projects/chime.jpg',
+      title: 'Iphone Lockscreen',
+      desc: 'A clone of Iphone lock screen notification animation scroll feature.',
+      img: './../../assets/projects/iphone-lockscreen.png',
       areas: ['Angular', 'TypeScript', 'SCSS'],
-      background: '#b8d3f1',
+      background: '#750207',
       link: {
-        github: 'https://github.com/Raheemcodes/Chime-portfolio',
-        website: 'https://chimezie-portfolio.web.app/',
+        github: 'https://github.com/Raheemcodes/iphone-lock-screen',
+        website: 'https://iphone-lockscreen.web.app/',
       },
     },
     {
@@ -161,28 +172,28 @@ export class SharedService {
         website: 'https://iphone-calc.web.app',
       },
     },
-    {
-      title: 'RoyaleBiba Makeup Store',
-      desc: 'The RoyaleBiba Makeup store is a PWA (Progressive Web App) i created to buff up my angular framework skills. It is rendered from the server side and connected to a RestAPI.',
-      img: './../../assets/projects/royale.jpg',
-      areas: ['Angular', 'ExpressJS', 'MongoDB'],
-      background: '#E6C0BD',
-      link: {
-        github: 'https://github.com/Raheemcodes/Royale-biba-shop',
-        website: 'https://royalebiba-angular.web.app/',
-      },
-    },
-    {
-      title: 'Ibeemay',
-      desc: 'Created to get myself familiar with the intricacies of NodeJS and its framework, ExpressJS, Ibeemay Mobile Store is a demo E-Commerce web application for handling mobile phone purchase. It integrates Stripe payment gateway for (test) payments. ',
-      img: './../../assets/projects/ibeemay.jpg',
-      areas: ['ExpressJS', 'MongoDB', 'EJS', 'Stripe'],
-      background: '#4E6776',
-      link: {
-        github: 'https://github.com/Raheemcodes/Phone-store',
-        website: 'https://ibeemay.onrender.com/',
-      },
-    },
+    // {
+    //   title: 'RoyaleBiba Makeup Store',
+    //   desc: 'The RoyaleBiba Makeup store is a PWA (Progressive Web App) i created to buff up my angular framework skills. It is rendered from the server side and connected to a RestAPI.',
+    //   img: './../../assets/projects/royale.jpg',
+    //   areas: ['Angular', 'ExpressJS', 'MongoDB'],
+    //   background: '#E6C0BD',
+    //   link: {
+    //     github: 'https://github.com/Raheemcodes/Royale-biba-shop',
+    //     website: 'https://royalebiba-angular.web.app/',
+    //   },
+    // },
+    // {
+    //   title: 'Ibeemay',
+    //   desc: 'Created to get myself familiar with the intricacies of NodeJS and its framework, ExpressJS, Ibeemay Mobile Store is a demo E-Commerce web application for handling mobile phone purchase. It integrates Stripe payment gateway for (test) payments. ',
+    //   img: './../../assets/projects/ibeemay.jpg',
+    //   areas: ['ExpressJS', 'MongoDB', 'EJS', 'Stripe'],
+    //   background: '#4E6776',
+    //   link: {
+    //     github: 'https://github.com/Raheemcodes/Phone-store',
+    //     website: 'https://ibeemay.onrender.com/',
+    //   },
+    // },
   ];
 
   constructor(private router: Router) {}
