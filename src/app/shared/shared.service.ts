@@ -9,6 +9,17 @@ import { Project } from './shared.model';
 export class SharedService {
   projects: Project[] = [
     {
+      title: 'Aptos Monkey',
+      desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
+      img: './../../assets/projects/bulan.jpg',
+      areas: ['ReactJS', 'TypeScript', 'SCSS'],
+      background: '#FEEDCB',
+      link: {
+        github: 'https://github.com/Raheemcodes/aptos-monkey',
+        website: 'https://www.aptosmonkeys.club/',
+      },
+    },
+    {
       title: 'Bulan',
       desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
       img: './../../assets/projects/bulan.jpg',
