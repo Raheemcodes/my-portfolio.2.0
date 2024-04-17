@@ -11,7 +11,7 @@ export class SharedService {
     {
       title: 'Aptos Monkey',
       desc: 'A website for an NFT project. Created to keep their user community engaged and informed.',
-      img: './../../assets/projects/bulan.jpg',
+      img: './../../assets/projects/aptos-monkey.jpg',
       areas: ['ReactJS', 'TypeScript', 'SCSS'],
       background: '#FEEDCB',
       link: {
