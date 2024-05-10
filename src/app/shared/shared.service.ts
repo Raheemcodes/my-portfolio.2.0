@@ -31,6 +31,17 @@ export class SharedService {
       },
     },
     {
+      title: 'Ecommerce Product Page',
+      desc: 'An implementation of Ecommerce product page design from frontend mentor',
+      img: './../../assets/projects/ecommerce-product-page.jpg',
+      areas: ['ReactJS', 'SCSS', 'TypeScript', 'Firebase', 'FrontendMentor'],
+      background: '#ffffff',
+      link: {
+        github: 'https://github.com/Raheemcodes/e-commerce__CSR',
+        website: 'https://ecommerce-csr.web.app/',
+      },
+    },
+    {
       title: 'Population Web App',
       desc: "A web app for checking different country's population",
       img: './../../assets/projects/census.png',
