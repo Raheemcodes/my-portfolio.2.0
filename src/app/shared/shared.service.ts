@@ -31,6 +31,17 @@ export class SharedService {
       },
     },
     {
+      title: 'Mafiaz',
+      desc: 'An NFT staking marketplace',
+      img: './../../assets/projects/mafiaz.jpg',
+      areas: ['NextJS', 'SCSS', 'TypeScript'],
+      background: '#306887',
+      link: {
+        github: 'https://github.com/Raheemcodes',
+        website: 'https://www.mafiaz.xyz',
+      },
+    },
+    {
       title: 'Ecommerce Product Page',
       desc: 'An implementation of Ecommerce product page design from frontend mentor',
       img: './../../assets/projects/ecommerce-product-page.jpg',
@@ -127,17 +138,17 @@ export class SharedService {
         website: 'https://iphone-lockscreen.web.app/',
       },
     },
-    {
-      title: 'Attendance Collator',
-      desc: 'The Attendance management system uses both password and password-less authentication (JavaScript webauthnAPI was used for its passwordless authentication); also GPS protection where necessary.',
-      img: './../../assets/projects/yct.jpg',
-      areas: ['Angular', 'ExpressJs', 'MongoDB'],
-      background: '#e1e8e0',
-      link: {
-        github: 'https://github.com/Raheemcodes/YCT-Attendance-Collator',
-        website: 'https://yct-attendance-collator.onrender.com',
-      },
-    },
+    // {
+    //   title: 'Attendance Collator',
+    //   desc: 'The Attendance management system uses both password and password-less authentication (JavaScript webauthnAPI was used for its passwordless authentication); also GPS protection where necessary.',
+    //   img: './../../assets/projects/yct.jpg',
+    //   areas: ['Angular', 'ExpressJs', 'MongoDB'],
+    //   background: '#e1e8e0',
+    //   link: {
+    //     github: 'https://github.com/Raheemcodes/YCT-Attendance-Collator',
+    //     website: 'https://yct-attendance-collator.onrender.com',
+    //   },
+    // },
     {
       title: 'Squidward',
       desc: 'Squidward is a character from my favorite cartoon series. I leisurely developed this using HTML, SCSS and webpack.',
@@ -172,17 +183,17 @@ export class SharedService {
         website: 'https://dream-site-407d0.web.app/index.html',
       },
     },
-    {
-      title: 'Angular Biometrics',
-      desc: 'I embarked on this project to further improve how I make use of the JavaScript Webauthn API in the most efficient and simplest solution I can come up with.',
-      img: './../../assets/projects/biometrics.jpg',
-      areas: ['Angular', 'Angular Material', 'ExpressJS', 'MongoDB', 'NgRx'],
-      background: '#673BB7',
-      link: {
-        github: 'https://github.com/Raheemcodes/angular-biometrics',
-        website: 'https://angular-biometric.web.app/',
-      },
-    },
+    // {
+    //   title: 'Angular Biometrics',
+    //   desc: 'I embarked on this project to further improve how I make use of the JavaScript Webauthn API in the most efficient and simplest solution I can come up with.',
+    //   img: './../../assets/projects/biometrics.jpg',
+    //   areas: ['Angular', 'Angular Material', 'ExpressJS', 'MongoDB', 'NgRx'],
+    //   background: '#673BB7',
+    //   link: {
+    //     github: 'https://github.com/Raheemcodes/angular-biometrics',
+    //     website: 'https://angular-biometric.web.app/',
+    //   },
+    // },
     {
       title: 'iPhone Calculator',
       desc: 'I developed this project to hone my angular skills and my knowledge on web components.',
