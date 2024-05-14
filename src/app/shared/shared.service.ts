@@ -20,17 +20,6 @@ export class SharedService {
       },
     },
     {
-      title: 'Bulan',
-      desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
-      img: './../../assets/projects/bulan.jpg',
-      areas: ['Angular', 'ExpressJs', 'TypeScript'],
-      background: '#7da4c3',
-      link: {
-        github: 'https://github.com/bulan-io',
-        website: 'https://bulan.io/',
-      },
-    },
-    {
       title: 'Mafiaz',
       desc: 'An NFT staking marketplace',
       img: './../../assets/projects/mafiaz.jpg',
@@ -39,6 +28,17 @@ export class SharedService {
       link: {
         github: 'https://github.com/Raheemcodes',
         website: 'https://www.mafiaz.xyz',
+      },
+    },
+    {
+      title: 'Bulan',
+      desc: 'A website for an african-themed NFT project. Created to enlighten people on the history and culture surrounding African deities.',
+      img: './../../assets/projects/bulan.jpg',
+      areas: ['Angular', 'ExpressJs', 'TypeScript'],
+      background: '#7da4c3',
+      link: {
+        github: 'https://github.com/bulan-io',
+        website: 'https://bulan.io/',
       },
     },
     {
