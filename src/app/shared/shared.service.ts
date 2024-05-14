@@ -21,7 +21,7 @@ export class SharedService {
     },
     {
       title: 'Mafiaz',
-      desc: 'An NFT staking marketplace',
+      desc: 'A NFT staking marketplace',
       img: './../../assets/projects/mafiaz.jpg',
       areas: ['NextJS', 'SCSS', 'TypeScript'],
       background: '#306887',
