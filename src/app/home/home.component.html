@@ -97,12 +97,13 @@
       My name is Yusuf Abdulraheem. I’m a full stack web developer. When I'm not
       coding, I'm either cycling, swimming or diving into my own imaginaton. My
       skills are mainly focused on MEAN stack web development tools (MongoDB,
-      ExpressJS, Angular, NodeJS). Additionally, I have a solid knowledge and
-      experience with HTML, CSS, JavaScript for frontend, Template engines such
-      as EJS, PUG and Handlebars for dynamic rendering. NodeJS and it's
-      framework (ExpressJS) for backend. With my knowledge I'm quite experienced
-      with developing Progressive Web Apps and also working towards making a
-      huge impact by contributing immensely in the software technology world.
+      ExpressJS, ReactJS, Angular, NodeJS). Additionally, I have a solid
+      knowledge and experience with HTML, CSS, JavaScript for frontend, Template
+      engines such as EJS, PUG and Handlebars for dynamic rendering. NodeJS and
+      it's framework (ExpressJS) for backend. With my knowledge I'm quite
+      experienced with developing Progressive Web Apps and also working towards
+      making a huge impact by contributing immensely in the software technology
+      world.
     </p>
 
     <div class="about-btn__container">
@@ -261,16 +262,16 @@
             aray-duration="650ms"
             aray-delay="3.3s"
           >
-            Angular
+            ReactJS
           </li>
           <li
             class="skills-item"
             aray-animate="fadeIn"
-            aray-offsetX="-30%"
+            aray-offsetX="30%"
             aray-duration="650ms"
-            aray-delay="3.8s"
+            aray-delay="3.3s"
           >
-            Webpack
+            Angular
           </li>
         </ul>
       </div>
@@ -668,7 +669,9 @@
 
     <ul class="contact-list">
       <li class="contact-details">
-        <div
+        <a
+          href="https://www.instagram.com/raheem.codes/"
+          target="_blank"
           class="icon-cover"
           aray-animate="fadeIn"
           aray-offsetX="-30%"
@@ -681,7 +684,7 @@
             ngSrc="./../../assets/icons/insta.png"
             alt
           />
-        </div>
+        </a>
         <div
           class="contact-details-title"
           aray-animate="fadeIn"
@@ -703,7 +706,9 @@
       </li>
 
       <li class="contact-details">
-        <div
+        <a
+          href="mailto:raheemscorporatemail@gmail.com"
+          target="_blank"
           class="icon-cover"
           aray-animate="fadeIn"
           aray-offsetY="-40%"
@@ -716,7 +721,7 @@
             ngSrc="./../../assets/icons/email.png"
             alt
           />
-        </div>
+        </a>
         <div
           class="contact-details-title"
           aray-animate="fadeIn"
@@ -738,7 +743,9 @@
       </li>
 
       <li class="contact-details">
-        <div
+        <a
+          href="https://twitter.com/raheemdevs"
+          target="_blank"
           class="icon-cover"
           aray-animate="fadeIn"
           aray-offsetX="40%"
@@ -751,7 +758,7 @@
             ngSrc="./../../assets/icons/contact-twitter.png"
             alt
           />
-        </div>
+        </a>
         <div
           class="contact-details-title"
           aray-animate="fadeIn"
@@ -768,12 +775,12 @@
           aray-duration="600ms"
           aray-delay="800ms"
         >
-          @raheemscorp
+          @raheemdevs
         </div>
       </li>
     </ul>
 
-    <form [formGroup]="msgForm" (submit)="submit()" autocomplete="off">
+    <!-- <form [formGroup]="msgForm" (submit)="submit()" autocomplete="off">
       <div
         class="form-control"
         aray-animate="fadeIn"
@@ -843,10 +850,10 @@
       </button>
 
       <p class="error-msg" *ngIf="error">Something went wrong</p>
-    </form>
+    </form> -->
   </section>
 
-  <app-success *ngIf="success" (close)="onclose()"></app-success>
+  <!-- <app-success *ngIf="success" (close)="onclose()"></app-success> -->
 
   <section id="footer">
     <app-footer></app-footer>

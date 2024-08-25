@@ -642,6 +642,7 @@ main {
   list-style: none;
   @include column-centered();
   gap: toRem(88);
+  padding-bottom: 5rem;
 
   @media screen and (min-width: $md) {
     @include between();

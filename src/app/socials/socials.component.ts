@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
       class="link-img__container"
       title="Twitter Profile"
       target="_blank"
-      href="https://twitter.com/raheemscorp?s=20&t=7mtcCzsfzRE810cRUiSypg"
+      href="https://twitter.com/raheemdevs"
     >
       <img ngSrc="./../../assets/icons/Twitter.png" alt fill priority />
     </a>
