@@ -1,0 +1,878 @@
+@import "./../shared/shared";
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+#home {
+  position: relative;
+  @include column-between-centered();
+  gap: toRem(32);
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  padding-top: toRem(69);
+
+  @media screen and (min-width: $md) {
+    padding-top: toRem(78);
+  }
+}
+
+.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  background-color: #424648;
+}
+
+.intro {
+  z-index: 1;
+  padding-top: toRem(128);
+  @include column-centered();
+  gap: toRem(128);
+  @media screen and (min-width: $lg) {
+    padding-top: toRem(124);
+    gap: toRem(124);
+  }
+  @media screen and (min-width: $two-xl) {
+    padding-top: toRem(156);
+    gap: toRem(124);
+  }
+
+  .intro-msg {
+    @include column-centered();
+    gap: toRem(24);
+
+    @media screen and (min-width: $md) {
+      gap: toRem(32);
+    }
+  }
+
+  .welcome-msg {
+    font-size: toRem(16);
+    font-weight: 700;
+    line-height: 1em;
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(24);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(32);
+    }
+  }
+
+  .name {
+    font-size: toRem(30);
+    font-weight: 900;
+    line-height: 1em;
+    text-align: center;
+    color: var(--black-100);
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(88);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(112);
+    }
+
+    span {
+      font-weight: 900;
+      color: var(--main-purple);
+    }
+  }
+
+  .job-title {
+    font-family: Satoshi;
+    font-size: toRem(20);
+    font-weight: 700;
+    line-height: 1em;
+    text-align: center;
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(32);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(48);
+    }
+  }
+}
+
+.cta {
+  @include centered();
+  gap: toRem(8);
+  background-color: #0000;
+  color: var(--black-90);
+  font-size: toRem(14);
+  font-weight: 700;
+  line-height: toRem(24);
+  border-radius: toRem(64);
+  padding: toRem(16) toRem(24);
+  border: 2px solid var(--black-90);
+
+  &.infite-translate {
+    animation: fadeIn 3s ease-out, infinite-down 3.5s ease-out infinite;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      font-size: toRem(18);
+      border: 3px solid var(--main-purple);
+    }
+  }
+  @media screen and (min-width: $md) {
+    padding: toRem(24) toRem(32);
+    font-size: toRem(17);
+  }
+  @media screen and (min-width: $two-xl) {
+    padding: toRem(32) toRem(48);
+    font-size: toRem(18);
+  }
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  width: 100%;
+  @include column-flex();
+  padding-bottom: toRem(64);
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    padding-bottom: toRem(164);
+  }
+}
+
+.title {
+  position: relative;
+  @include centered();
+  margin: toRem(24) auto toRem(64);
+
+  @media screen and (min-width: $md) {
+    margin: toRem(24) auto toRem(88);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin: toRem(24) auto toRem(128);
+  }
+
+  span {
+    font-size: toRem(88);
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--black-20);
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(140);
+      line-height: toRem(128);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(156);
+      line-height: toRem(128);
+    }
+  }
+
+  .main-title {
+    position: absolute;
+    top: 0;
+    font-size: toRem(40);
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--main-color);
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(56);
+      line-height: toRem(64);
+    }
+    @media screen and (min-width: $md) {
+      font-size: toRen(40);
+      line-height: toRem(74);
+    }
+  }
+}
+
+.about-content {
+  font-size: toRem(18);
+  font-weight: 400;
+  line-height: toRem(33);
+  @media screen and (min-width: $md) {
+    font-size: toRem(32);
+    line-height: toRem(59);
+  }
+}
+
+.about-btn__container {
+  width: 100%;
+  @include centered();
+  gap: toRem(48);
+  margin: toRem(56) 0 0;
+
+  @media screen and (min-width: $md) {
+    margin: toRem(88) 0 0;
+    gap: toRem(88);
+  }
+  @media screen and (min-width: $md) {
+    margin: toRem(64) 0 0;
+    gap: toRem(124);
+  }
+
+  a {
+    font-size: toRem(12);
+    font-weight: 700;
+    line-height: 1.17em;
+    border-radius: toRem(64);
+    padding: toRem(16) toRem(24);
+    @include fade-hover(opacity, 200ms, 0.7);
+
+    @media screen and (min-width: $md) {
+      padding: toRem(32) toRem(48);
+      font-size: toRem(16);
+    }
+    @media screen and (min-width: $two-xl) {
+      padding: toRem(32) toRem(56);
+      font-size: toRem(18);
+    }
+
+    &.purple {
+      background-color: var(--main-purple);
+      color: var(--black-90);
+    }
+
+    &.white {
+      background-color: var(--black-100);
+      color: var(--black-20);
+    }
+  }
+}
+
+.skills-main__container {
+  width: 100%;
+  @include column-flex();
+  gap: toRem(88);
+
+  @media screen and (min-width: $md) {
+    @include between();
+    gap: toRem(32);
+  }
+}
+
+.skills-list__container {
+  width: 100%;
+  @include column-centered();
+  gap: toRem(24);
+
+  @media screen and (min-width: $md) {
+    gap: toRem(32);
+  }
+  @media screen and (min-width: $two-xl) {
+    gap: toRem(48);
+  }
+}
+
+.skill-icon__cover {
+  @include centered();
+  width: toRem(112);
+  height: toRem(112);
+  background-color: var(--main-purple);
+  border-radius: 50%;
+
+  @media screen and (min-width: $lg) {
+    width: toRem(128);
+    height: toRem(128);
+  }
+  @media screen and (min-width: $two-xl) {
+    width: toRem(138);
+    height: toRem(138);
+  }
+
+  img {
+    width: toRem(36);
+    height: auto;
+
+    @media screen and (min-width: $lg) {
+      width: toRem(40);
+    }
+    @media screen and (min-width: $two-xl) {
+      width: toRem(44);
+    }
+  }
+}
+
+.skill-tile {
+  font-size: toRem(24);
+  font-weight: 700;
+  line-height: toRem(32);
+  text-align: center;
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(32);
+    line-height: toRem(43);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(40);
+    line-height: toRem(54);
+  }
+}
+
+.skill-desc {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(24);
+  text-align: center;
+  max-width: toRem(343);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+    max-width: toRem(501);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(32);
+    line-height: toRem(43);
+    max-width: toRem(632);
+  }
+}
+
+.term {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(24);
+  color: var(--main-purple);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(32);
+    line-height: toRem(43);
+  }
+}
+
+.skills-list {
+  list-style: none;
+  @include column-centered();
+}
+
+.skills-item {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(27);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(24);
+    line-height: toRem(36);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(32);
+    line-height: toRem(48);
+  }
+}
+
+// .projects-list {
+//   width: 100%;
+//   list-style: none;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: toRem(40);
+
+//   @media screen and (min-width: $sm) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     gap: toRem(32);
+//   }
+//   @media screen and (min-width: $two-xl) {
+//     gap: toRem(56);
+//   }
+// }
+
+// .project {
+//   position: relative;
+//   width: 100%;
+//   height: calc(215 / 375) * 100vw;
+//   background-color: var(--main-color);
+//   overflow: hidden;
+
+//   @supports (aspect-ratio: 343/215) {
+//     aspect-ratio: 343/215;
+//     height: auto;
+//   }
+
+//   @media screen and (min-width: $sm) {
+//     height: calc(342 / 1194) * 100vw;
+
+//     @supports (aspect-ratio: 343/215) {
+//       aspect-ratio: none;
+//     }
+
+//     &.span-2 {
+//       grid-column: span 2;
+//     }
+//   }
+
+//   img {
+//     object-fit: cover;
+//     object-position: center top;
+//   }
+// }
+
+// .project-backdrop {
+//   @include column-centered();
+//   padding: 1rem;
+//   gap: toRem(8);
+//   position: absolute;
+//   inset: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   background-color: rgba($color: #000, $alpha: 0.5);
+
+//   @media (hover: hover) {
+//     background: rgba(141, 58, 248, 0.8);
+//     backdrop-filter: blur(4px);
+//     opacity: 0;
+//   }
+
+//   @include fade-hover(opacity, 300ms, 1);
+// }
+
+// .project-title {
+//   font-size: toRem(20);
+//   font-weight: 700;
+//   line-height: toRem(27);
+//   text-align: center;
+
+//   @media screen and (min-width: $two-xl) {
+//     font-size: toRem(40);
+//     line-height: toRem(54);
+//   }
+// }
+
+// .project-sub__title {
+//   font-size: toRem(14);
+//   font-weight: 500;
+//   line-height: toRem(19);
+//   color: var(--black-90);
+//   text-align: center;
+
+//   @media screen and (min-width: $two-xl) {
+//     font-size: toRem(18);
+//     line-height: toRem(24);
+//   }
+// }
+
+.project-cta {
+  align-self: center;
+  margin-top: toRem(64);
+}
+
+.project-list {
+  width: 100%;
+  list-style: none;
+  @include column-flex();
+  gap: toRem(119);
+  // margin-bottom: toRem(204);
+
+  @media screen and (min-width: $lg) {
+    gap: toRem(144);
+    // margin-bottom: toRem(280);
+  }
+  @media screen and (min-width: $two-xl) {
+    // margin-bottom: toRem(300);
+  }
+}
+
+.project {
+  @include column-flex();
+  gap: toRem(16);
+  width: 100%;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    @include between-centered();
+    gap: toRem(32);
+    flex-direction: row-reverse;
+  }
+  @media screen and (min-width: $two-xl) {
+    gap: toRem(82);
+  }
+}
+
+.img-cover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: toRem(8);
+  height: calc(210 / 343) * 100vw;
+  cursor: pointer;
+
+  @media screen and (min-width: $md) {
+    max-width: toRem(639);
+    width: auto;
+    flex: 1;
+  }
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(850);
+  }
+
+  @supports (aspect-ratio: 210/343) {
+    aspect-ratio: 343/210;
+    height: auto;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.content {
+  @include column-flex();
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    flex: 1;
+    max-width: toRem(500);
+    gap: toRem(28);
+  }
+  @media screen and (min-width: $two-xl) {
+    max-width: toRem(638);
+    gap: toRem(40);
+  }
+}
+
+.project-title {
+  font-size: toRem(24);
+  font-weight: 700;
+  line-height: toRem(38);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(56);
+    line-height: toRem(64);
+  }
+}
+
+.project-desc {
+  font-size: toRem(16);
+  font-weight: 400;
+  line-height: toRem(24);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    font-weight: 500;
+    line-height: toRem(40);
+  }
+}
+
+.project-areas {
+  list-style: none;
+  @include display-flex();
+  flex-wrap: wrap;
+  gap: toRem(16);
+
+  @media screen and (min-width: $three-xl) {
+    gap: toRem(24);
+  }
+}
+
+.project-area {
+  font-size: toRem(10);
+  font-weight: 400;
+  color: var(--black-70);
+  padding: toRem(12) toRem(24);
+  border-radius: toRem(24);
+  background-color: var(--black-20);
+  flex-shrink: 0;
+
+  @media screen and (min-width: $xl) {
+    font-size: toRem(14);
+  }
+
+  @media screen and (min-width: $three-xl) {
+    font-size: toRem(18);
+  }
+}
+
+.link-container {
+  @include display-flex();
+  gap: toRem(24);
+
+  @media screen and (min-width: $lg) {
+    gap: toRem(56);
+  }
+}
+
+.link {
+  font-size: toRem(17);
+  font-weight: 500;
+  line-height: toRem(23);
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+
+  @media screen and (min-width: $lg) {
+    font-size: toRem(20);
+    line-height: toRem(27);
+  }
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--main-purple);
+      border-bottom: 2px solid var(--main-purple);
+    }
+  }
+}
+
+#contact {
+  padding-bottom: 0;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $md) {
+    padding-bottom: 0;
+  }
+}
+
+.contact-list {
+  width: 100%;
+  list-style: none;
+  @include column-centered();
+  gap: toRem(88);
+  padding-bottom: 5rem;
+
+  @media screen and (min-width: $md) {
+    @include between();
+    gap: toRem(32);
+  }
+}
+
+.contact-details {
+  // width: 100%;
+  @include column-centered();
+  gap: toRem(32);
+
+  .icon-cover {
+    width: toRem(128);
+    height: toRem(128);
+    border-radius: 50%;
+    background-color: var(--main-purple);
+    @include centered();
+
+    @media screen and (min-width: $two-xl) {
+      width: toRem(138);
+      height: toRem(138);
+    }
+
+    img {
+      width: toRem(40);
+      height: auto;
+    }
+  }
+}
+
+.contact-details-title {
+  font-size: toRem(26);
+  font-weight: 700;
+  line-height: toRem(35);
+  text-align: center;
+  color: var(--black-90);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(32);
+    line-height: toRem(43);
+  }
+}
+
+.contact-id {
+  font-size: toRem(18);
+  font-weight: 500;
+  line-height: toRem(24);
+  text-align: center;
+  color: var(--black-90);
+
+  @media screen and (min-width: $two-xl) {
+    font-size: toRem(24);
+    line-height: toRem(32);
+  }
+}
+
+form {
+  margin: toRem(56) 0 toRem(95);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    margin: toRem(91) 0 toRem(134);
+    grid-template-columns: 1fr 1fr;
+    gap: toRem(24) toRem(32);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin: toRem(124) 0 toRem(134);
+    gap: toRem(48) toRem(190);
+  }
+}
+
+.form-control {
+  width: 100%;
+  @include column-flex();
+  gap: toRem(16);
+
+  @media screen and (min-width: $md) {
+    gap: toRem(24);
+
+    &.span-2 {
+      grid-column: span 2;
+    }
+  }
+
+  label {
+    font-size: toRem(18);
+    font-weight: 500;
+    line-height: toRem(24);
+    color: var(--black-90);
+
+    @media screen and (min-width: $md) {
+      font-size: toRem(20);
+      line-height: toRem(27);
+    }
+    @media screen and (min-width: $two-xl) {
+      font-size: toRem(28);
+      line-height: toRem(38);
+    }
+  }
+
+  input {
+    height: toRem(60);
+
+    @media screen and (min-width: $md) {
+      height: toRem(85);
+    }
+    @media screen and (min-width: $two-xl) {
+      height: toRem(102);
+    }
+  }
+
+  textarea {
+    height: toRem(237);
+
+    @media screen and (min-width: $md) {
+      height: toRem(350);
+    }
+    @media screen and (min-width: $two-xl) {
+      height: toRem(546);
+    }
+  }
+
+  .typo {
+    padding: toRem(10) toRem(14);
+    font-size: toRem(14);
+    font-weight: 400;
+    line-height: toRem(22);
+    color: var(--main-color);
+    border: 1.5px solid var(--black-30);
+    background-color: #0000;
+    border-radius: toRem(8);
+
+    &:focus {
+      border: 1.5px solid var(--main-purple);
+    }
+
+    @media screen and (min-width: $md) {
+      padding: toRem(24);
+      font-size: toRem(18);
+      line-height: toRem(29);
+    }
+    @media screen and (min-width: $two-xl) {
+      padding: toRem(32) toRem(24);
+      font-size: toRem(24);
+      line-height: toRem(38);
+    }
+  }
+}
+
+.form-btn {
+  @include centered();
+  background-color: var(--main-purple);
+  color: var(--black-90);
+  justify-self: center;
+  margin-top: toRem(32 - 16);
+  font-size: toRem(12);
+  font-weight: 700;
+  line-height: toRem(14);
+  border-radius: toRem(64);
+  padding: toRem(20) toRem(36);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  animation: fadeIn 3s ease-out;
+
+  @media screen and (min-width: $md) {
+    margin-top: toRem(88 - 24);
+    grid-column: span 2;
+    padding: toRem(32) toRem(56);
+    font-size: toRem(18);
+    line-height: toRem(24);
+  }
+  @media screen and (min-width: $two-xl) {
+    margin-top: toRem(88 - 48);
+  }
+
+  @include fade-hover(opacity, 300ms, 0.8);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+  }
+}
+
+.error-msg {
+  text-align: center;
+  align-self: center;
+  font-size: toRem(24);
+  font-weight: 500;
+  line-height: 1;
+  color: #df3535;
+  margin: toRem(16) auto;
+
+  @media screen and (min-width: $md) {
+    font-size: toRem(32);
+    grid-column: span 2;
+  }
+}
+
+.loading-spinner {
+  width: toRem(32);
+  pointer-events: none;
+  height: auto;
+  animation: fadeIn 300ms ease-out, spin 500ms ease-out infinite alternate;
+
+  @media screen and (min-width: $md) {
+    width: toRem(46);
+  }
+}
+
+@keyframes infinite-down {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,861 @@
+<main>
+  <section id="home">
+    <img
+      class="bg-img"
+      ngSrc="./../../assets/bg-image.jpg"
+      sizes="100%"
+      alt
+      priority
+      fill
+    />
+
+    <div class="intro">
+      <div class="intro-msg">
+        <div
+          class="welcome-msg"
+          aray-animate="fadeIn"
+          aray-duration="800ms"
+          aray-offsetY="-150%"
+          aray-delay="300ms"
+        >
+          Hello World!
+        </div>
+        <div
+          class="name"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="800ms"
+          aray-delay="500ms"
+        >
+          I’m <span>Yusuf Abdulraheem</span>
+        </div>
+        <div
+          class="job-title"
+          aray-animate="fadeIn"
+          aray-offsetY="-40%"
+          aray-duration="800ms"
+          aray-delay="300ms"
+        >
+          A full stack web developer
+        </div>
+      </div>
+
+      <div
+        appClick="light"
+        (click)="sharedSv.navigate('/', 'about')"
+        aria-label="about me button"
+        class="cta infite-translate"
+      >
+        <span>MORE ABOUT ME</span>
+
+        <img
+          width="24"
+          height="24"
+          loading="lazy"
+          src="./../../assets/icons/arrow-down.png"
+          alt
+          (error)="$any($event.currentTarget).style.display = 'none'"
+        />
+      </div>
+    </div>
+
+    <app-socials
+      aray-animate="fadeIn"
+      aray-offsetY="-35%"
+      aray-duration="800ms"
+      aray-delay="500ms"
+    ></app-socials>
+  </section>
+
+  <section id="about">
+    <h2
+      class="title"
+      aray-animate="fadeIn"
+      aray-offsetY="-30%"
+      aray-duration="500ms"
+      aray-delay="300ms"
+    >
+      <span>About</span>
+      <div
+        class="main-title"
+        aray-animate="fadeIn"
+        aray-offsetY="125%"
+        aray-duration="700ms"
+        aray-delay="300ms"
+      >
+        About Me
+      </div>
+    </h2>
+
+    <p
+      class="about-content"
+      aray-animate="fadeIn"
+      aray-delay="400ms"
+      aray-offsetY="15%"
+      aray-duration="700ms"
+    >
+      My name is Yusuf Abdulraheem. I’m a full stack web developer. When I'm not
+      coding, I'm either cycling, swimming or diving into my own imaginaton. My
+      skills are mainly focused on MEAN stack web development tools (MongoDB,
+      ExpressJS, ReactJS, Angular, NodeJS). Additionally, I have a solid
+      knowledge and experience with HTML, CSS, JavaScript for frontend, Template
+      engines such as EJS, PUG and Handlebars for dynamic rendering. NodeJS and
+      it's framework (ExpressJS) for backend. With my knowledge I'm quite
+      experienced with developing Progressive Web Apps and also working towards
+      making a huge impact by contributing immensely in the software technology
+      world.
+    </p>
+
+    <div class="about-btn__container">
+      <a
+        href="mailto:raheemscorporatemail@gmail.com"
+        title="Mail me"
+        appClick
+        class="purple"
+        aray-animate="fadeIn"
+        aray-offsetX="-25%"
+        aray-duration="400ms"
+        aray-delay="500ms"
+      >
+        HIRE ME
+      </a>
+      <a
+        href="./../../assets/file/resume.pdf"
+        target="_blank"
+        title="My Resume"
+        appClick
+        class="white"
+        aray-animate="fadeIn"
+        aray-offsetX="25%"
+        aray-duration="400ms"
+        aray-delay="500ms"
+      >
+        RESUME
+      </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2
+      class="title"
+      aray-animate="fadeIn"
+      aray-offsetY="-30%"
+      aray-duration="500ms"
+      aray-delay="300ms"
+    >
+      <span>Skills</span>
+      <div
+        class="main-title"
+        aray-animate="fadeIn"
+        aray-offsetY="125%"
+        aray-duration="700ms"
+        aray-delay="300ms"
+      >
+        Skills
+      </div>
+    </h2>
+
+    <div class="skills-main__container">
+      <div class="skills-list__container">
+        <div
+          class="skill-icon__cover"
+          aray-animate="fadeIn"
+          aray-offsetY="-30%"
+          aray-duration="550ms"
+          aray-delay="300ms"
+        >
+          <img
+            width="72"
+            height="67"
+            ngSrc="./../../assets/icons/html-syntax.png"
+            alt="frontend icon"
+          />
+        </div>
+
+        <h3
+          class="skill-tile"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="300ms"
+        >
+          Frontend Development
+        </h3>
+
+        <p
+          class="skill-desc"
+          aray-animate="fadeIn"
+          aray-offsetY="50%"
+          aray-duration="700ms"
+          aray-delay="300ms"
+        >
+          I like to code things from scratch, and enjoy bringing ideas to life
+          in the browser.
+        </p>
+
+        <div
+          class="term"
+          aray-animate="fadeIn"
+          aray-offsetX="-50%"
+          aray-duration="550ms"
+          aray-delay="300ms"
+        >
+          Skills:
+        </div>
+
+        <ul
+          class="skills-list"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="300ms"
+        >
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="0.8s"
+          >
+            HTML
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="1.3s"
+          >
+            CSS
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="1.8s"
+          >
+            SASS/SCSS
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="2.3s"
+          >
+            JavaScript
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="2.8s"
+          >
+            TypeScript
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="3.3s"
+          >
+            ReactJS
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="3.3s"
+          >
+            Angular
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills-list__container">
+        <div
+          class="skill-icon__cover"
+          aray-animate="fadeIn"
+          aray-offsetY="-30%"
+          aray-duration="550ms"
+          aray-delay="300ms"
+        >
+          <img
+            width="74"
+            height="85"
+            ngSrc="./../../assets/icons/database.png"
+            alt="backend icon3"
+          />
+        </div>
+
+        <h3
+          class="skill-tile"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="300ms"
+        >
+          Backend Development
+        </h3>
+
+        <p
+          class="skill-desc"
+          aray-animate="fadeIn"
+          aray-offsetY="50%"
+          aray-duration="700ms"
+          aray-delay="300ms"
+        >
+          I like organizing data, and ensuring everything on the client-side
+          actually works.
+        </p>
+
+        <div
+          class="term"
+          aray-animate="fadeIn"
+          aray-offsetX="-50%"
+          aray-duration="550ms"
+          aray-delay="300ms"
+        >
+          Skills:
+        </div>
+
+        <ul
+          class="skills-list"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="300ms"
+        >
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="0.8s"
+          >
+            NodeJs + TypeScript
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="1.3s"
+          >
+            ExpressJs
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="1.8s"
+          >
+            MongoDB
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="2.3s"
+          >
+            mySQL
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="2.8s"
+          >
+            RESTAPI
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="-30%"
+            aray-duration="650ms"
+            aray-delay="3.3s"
+          >
+            GraphQL
+          </li>
+          <li
+            class="skills-item"
+            aray-animate="fadeIn"
+            aray-offsetX="30%"
+            aray-duration="650ms"
+            aray-delay="3.8s"
+          >
+            Firebase
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2
+      class="title"
+      aray-animate="fadeIn"
+      aray-offsetY="-30%"
+      aray-duration="500ms"
+      aray-delay="300ms"
+    >
+      <span>Projects</span>
+      <div
+        class="main-title"
+        aray-animate="fadeIn"
+        aray-offsetY="125%"
+        aray-duration="700ms"
+        aray-delay="300ms"
+      >
+        My Projects
+      </div>
+    </h2>
+
+    <!-- <ul class="projects-list">
+      <li
+        class="project"
+        style="background-color: #f5f5f5"
+        aray-animate="fadeIn"
+        aray-offsetY="-10%"
+        aray-duration="800ms"
+        aray-delay="300ms"
+      >
+        <img
+          ngSrc="./../../assets/projects/date-picker-sm.png"
+          alt
+          fill
+          style="background-color: #f5f5f5"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Date Picker</h3>
+          <h4 class="project-sub__title">TypeScript</h4>
+        </div>
+      </li>
+
+      <li
+        class="project span-2"
+        style="background-color: #7da4c3"
+        aray-animate="fadeIn"
+        aray-offsetX="10%"
+        aray-duration="800ms"
+        aray-delay="300ms"
+      >
+        <img
+          ngSrc="./../../assets/projects/bulan.jpg"
+          alt="Bulan Team Page Preview"
+          fill
+          style="background-color: #7da4c3"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Bulan</h3>
+          <h4 class="project-sub__title">Angular</h4>
+        </div>
+      </li>
+
+      <li
+        class="project span-2"
+        style="background-color: #e1e8e0"
+        aray-animate="fadeIn"
+        aray-offsetX="-10%"
+        aray-duration="800ms"
+        aray-delay="800ms"
+      >
+        <img
+          ngSrc="./../../assets/projects/yct.jpg"
+          alt="YCT Attendance Collator Home Page Preview"
+          fill
+          style="background-color: #e1e8e0"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Attendance Collator</h3>
+          <h4 class="project-sub__title">MEAN</h4>
+        </div>
+      </li>
+
+      <li
+        class="project"
+        style="background-color: #f5f5f5"
+        aray-animate="fadeIn"
+        aray-offsetY="10%"
+        aray-duration="800ms"
+        aray-delay="800ms"
+      >
+        <img
+          ngSrc="./../../assets/projects/squid.jpg"
+          alt
+          fill
+          style="background-color: #f5f5f5"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Squidward</h3>
+          <h4 class="project-sub__title">SCSS</h4>
+        </div>
+      </li>
+
+      <li
+        class="project"
+        style="background-color: #b8d3f1"
+        aray-animate="fadeIn"
+        aray-offsetY="10%"
+        aray-duration="800ms"
+        aray-delay="1.3s"
+      >
+        <img
+          ngSrc="./../../assets/projects/chime.jpg"
+          alt="Chime's Portfolio Home Page Preview"
+          fill
+          style="background-color: #b8d3f1"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Web Portfolio</h3>
+          <h4 class="project-sub__title">Angular</h4>
+        </div>
+      </li>
+
+      <li
+        class="project span-2"
+        style="background-color: #3fb2ab"
+        aray-animate="fadeIn"
+        aray-offsetX="10%"
+        aray-duration="800ms"
+        aray-delay="1.3s"
+      >
+        <img
+          ngSrc="./../../assets/projects/money-mine.jpg"
+          alt
+          fill
+          style="background-color: #3fb2ab"
+        />
+        <div class="project-backdrop">
+          <h3 class="project-title">Money Mine</h3>
+          <h4 class="project-sub__title">JavaScript</h4>
+        </div>
+      </li>
+    </ul> -->
+
+    <ul class="project-list">
+      <li
+        class="project"
+        *ngFor="let project of projects; let i = index"
+        aray-animate="fadeIn"
+        aray-offsetY="40%"
+        aray-duration="500ms"
+        aray-delay="200ms"
+      >
+        <a
+          [href]="project.link.website"
+          target="_blank"
+          class="img-cover"
+          [style.backgroundColor]="project.background"
+        >
+          <img
+            [ngSrc]="project.img"
+            alt
+            fill
+            [priority]="i == 0 ? true : false"
+            (error)="$any($event.currentTarget).style.display = 'none'"
+          />
+        </a>
+
+        <div class="content">
+          <h2
+            class="project-title"
+            aray-animate="fadeIn"
+            aray-offsetX="5%"
+            aray-duration="500ms"
+            aray-delay="500ms"
+          >
+            {{ project.title }}
+          </h2>
+
+          <p
+            class="project-desc"
+            aray-animate="fadeIn"
+            aray-offsetY="20%"
+            aray-duration="500ms"
+            aray-delay="500ms"
+          >
+            {{ project.desc }}
+          </p>
+
+          <ul
+            class="project-areas"
+            aray-animate="fadeIn"
+            aray-offsetY="30%"
+            aray-duration="500ms"
+            aray-delay="500ms"
+          >
+            <li class="project-area" *ngFor="let area of project.areas">
+              {{ area }}
+            </li>
+          </ul>
+
+          <div class="link-container">
+            <a
+              [href]="project.link.github"
+              target="_blank"
+              class="link"
+              aray-animate="fadeIn"
+              aray-offsetX="15%"
+              aray-duration="500ms"
+              aray-delay="500ms"
+              >View Github</a
+            >
+            <a
+              [href]="project.link.website"
+              target="_blank"
+              class="link"
+              aray-animate="fadeIn"
+              aray-offsetX="-15%"
+              aray-duration="500ms"
+              aray-delay="500ms"
+              >View Website</a
+            >
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <button
+      appClick="light"
+      aray-animate="fadeIn"
+      aray-offsetY="50%"
+      aray-duration="500ms"
+      aray-delay="500ms"
+      (click)="sharedSv.navigate('/projects')"
+      aria-label="View more project button"
+      class="cta project-cta"
+    >
+      <span>View more</span>
+
+      <img
+        width="24"
+        height="24"
+        src="./../../assets/icons/arrow-down.png"
+        loading="lazy"
+        alt
+        (error)="$any($event.currentTarget).style.display = 'none'"
+      />
+    </button>
+  </section>
+
+  <section id="contact">
+    <h2
+      class="title"
+      aray-animate="fadeIn"
+      aray-offsetY="-30%"
+      aray-duration="500ms"
+      aray-delay="300ms"
+    >
+      <span>Contact</span>
+      <div
+        class="main-title"
+        class="main-title"
+        aray-animate="fadeIn"
+        aray-offsetY="125%"
+        aray-duration="700ms"
+        aray-delay="300ms"
+      >
+        Contact Me
+      </div>
+    </h2>
+
+    <ul class="contact-list">
+      <li class="contact-details">
+        <a
+          href="https://www.instagram.com/raheem.codes/"
+          target="_blank"
+          class="icon-cover"
+          aray-animate="fadeIn"
+          aray-offsetX="-30%"
+          aray-duration="500ms"
+          aray-delay="300ms"
+        >
+          <img
+            width="58"
+            height="58"
+            ngSrc="./../../assets/icons/insta.png"
+            alt
+          />
+        </a>
+        <div
+          class="contact-details-title"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="500ms"
+        >
+          INSTAGRAM
+        </div>
+        <div
+          class="contact-id"
+          aray-animate="fadeIn"
+          aray-offsetY="-30%"
+          aray-duration="600ms"
+          aray-delay="800ms"
+        >
+          @Raheem.codes
+        </div>
+      </li>
+
+      <li class="contact-details">
+        <a
+          href="mailto:raheemscorporatemail@gmail.com"
+          target="_blank"
+          class="icon-cover"
+          aray-animate="fadeIn"
+          aray-offsetY="-40%"
+          aray-duration="500ms"
+          aray-delay="300ms"
+        >
+          <img
+            width="78"
+            height="62"
+            ngSrc="./../../assets/icons/email.png"
+            alt
+          />
+        </a>
+        <div
+          class="contact-details-title"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="500ms"
+        >
+          EMAIL ADDRESS
+        </div>
+        <div
+          class="contact-id"
+          aray-animate="fadeIn"
+          aray-offsetY="-30%"
+          aray-duration="600ms"
+          aray-delay="800ms"
+        >
+          Raheemscorporatemail@gmail.com
+        </div>
+      </li>
+
+      <li class="contact-details">
+        <a
+          href="https://twitter.com/raheemdevs"
+          target="_blank"
+          class="icon-cover"
+          aray-animate="fadeIn"
+          aray-offsetX="40%"
+          aray-duration="500ms"
+          aray-delay="300ms"
+        >
+          <img
+            width="79"
+            height="70"
+            ngSrc="./../../assets/icons/contact-twitter.png"
+            alt
+          />
+        </a>
+        <div
+          class="contact-details-title"
+          aray-animate="fadeIn"
+          aray-offsetY="30%"
+          aray-duration="600ms"
+          aray-delay="500ms"
+        >
+          TWITTER PROFILE
+        </div>
+        <div
+          class="contact-id"
+          aray-animate="fadeIn"
+          aray-offsetY="-30%"
+          aray-duration="600ms"
+          aray-delay="800ms"
+        >
+          @raheemdevs
+        </div>
+      </li>
+    </ul>
+
+    <!-- <form [formGroup]="msgForm" (submit)="submit()" autocomplete="off">
+      <div
+        class="form-control"
+        aray-animate="fadeIn"
+        aray-offsetX="-5%"
+        aray-duration="500ms"
+        aray-delay="650ms"
+      >
+        <label for="name">Name</label>
+        <input class="typo" type="text" id="name" formControlName="name" />
+
+        <app-validation-message *ngIf="name.invalid && name.touched">
+          Please fill out this field.
+        </app-validation-message>
+      </div>
+
+      <div
+        class="form-control"
+        aray-animate="fadeIn"
+        aray-offsetX="5%"
+        aray-duration="500ms"
+        aray-delay="650ms"
+      >
+        <label for="email">Email</label>
+        <input class="typo" type="email" id="email" formControlName="email" />
+
+        <app-validation-message *ngIf="email.invalid && email.touched">
+          Please enter a valid email address.
+        </app-validation-message>
+      </div>
+
+      <div
+        class="form-control span-2"
+        aray-animate="fadeIn"
+        aray-offsetY="10%"
+        aray-duration="500ms"
+        aray-delay="650ms"
+      >
+        <label for="message">Message</label>
+        <textarea
+          class="typo"
+          id="message"
+          formControlName="message"
+        ></textarea>
+
+        <app-validation-message *ngIf="msg.invalid && msg.touched">
+          Please fill out this field.
+        </app-validation-message>
+      </div>
+
+      <button
+        [disabled]="msgForm.invalid"
+        appClick
+        class="form-btn"
+        type="submit"
+      >
+        <img
+          *ngIf="loading"
+          class="loading-spinner"
+          width="46"
+          height="46"
+          ngSrc="./../../assets/icons/loading-spinner.svg"
+          alt
+          priority
+        />
+
+        <ng-container *ngIf="!loading">SUBMIT</ng-container>
+      </button>
+
+      <p class="error-msg" *ngIf="error">Something went wrong</p>
+    </form> -->
+  </section>
+
+  <!-- <app-success *ngIf="success" (close)="onclose()"></app-success> -->
+
+  <section id="footer">
+    <app-footer></app-footer>
+  </section>
+</main>
