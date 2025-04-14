@@ -24,7 +24,7 @@ export class SharedService {
       desc: 'A landing page for one of the leading project in the Aptos community.',
       img: './../../assets/projects/gui-inu.png',
       areas: ['ReactJS', 'TypeScript'],
-      background: '#FEEDCB',
+      background: '#b8d3f1',
       link: {
         github: 'https://github.com/Raheemcodes',
         website: 'https://gui-inu.web.app/',
@@ -35,7 +35,7 @@ export class SharedService {
       desc: 'A landing page for a product of one of the leading AI health assistance company.',
       img: './../../assets/projects/helf-buddy.png',
       areas: ['Angular', 'SCSS', 'TypeScript'],
-      background: '#ffffff',
+      background: '#f2f2f2',
       link: {
         github: 'https://github.com/Raheemcodes',
         website: 'https://buddy.helf.co/',
