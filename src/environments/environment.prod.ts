@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  frontendAddress: 'https://yraheem.tech',
+  frontendAddress: 'https://yraheem.dev',
   REST_API: 'https://w08bj42y03.execute-api.us-west-2.amazonaws.com/lambda',
 };

@@ -5,7 +5,7 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Home Page -->
   <url>
-    <loc>https://yraheem.tech/</loc>
+    <loc>https://yraheem.dev/</loc>
 
     <lastmod>2024-12-31</lastmod>
 
@@ -14,7 +14,7 @@
 
   <!-- Projects Page -->
   <url>
-    <loc>https://yraheem.tech/projects</loc>
+    <loc>https://yraheem.dev/projects</loc>
 
     <lastmod>2024-12-31</lastmod>
 
