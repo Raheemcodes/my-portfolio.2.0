@@ -27,7 +27,7 @@ export class SharedService {
       background: '#b8d3f1',
       link: {
         github: 'https://github.com/Raheemcodes',
-        website: 'https://gui-inu.web.app/',
+        website: 'https://www.guiinu.com',
       },
     },
     {
